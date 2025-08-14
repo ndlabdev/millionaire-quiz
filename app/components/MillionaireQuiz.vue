@@ -1,9 +1,18 @@
 <script setup lang="ts">
+
 interface QuestionLevel {
     number: number
     amount: string
     milestone?: boolean
 }
+
+const props = defineProps<{
+    mode: 'none' | 'full' | 'milestones'
+}>()
+
+const emit = defineEmits<{
+    (e: 'done'): void
+}>()
 
 const levels: QuestionLevel[] = [
     { number: 15, amount: '1,000,000', milestone: true },
@@ -26,34 +35,35 @@ const levels: QuestionLevel[] = [
 const visible = ref(false)
 const activeIndex = ref<number | null>(null)
 
-onMounted(() => {
+watch(() => props.mode, (mode) => {
+    if (mode === 'none') {
+        visible.value = false
+        return
+    }
+
     visible.value = true
+    activeIndex.value = null
 
-    let i = 0
+    let indices: number[] = []
+
+    if (mode === 'full') {
+        indices = Array.from({ length: levels.length }, (_, i) => levels.length - 1 - i)
+    } else if (mode === 'milestones') {
+        indices = levels.map((l, idx) => l.milestone ? idx : -1).filter(i => i !== -1)
+    }
+
+    let step = 0
     const timer = setInterval(() => {
-        activeIndex.value = levels.length - 1 - i
-        i++
-        if (i >= levels.length) {
+        activeIndex.value = indices[step] ?? null
+        step++
+        if (step >= indices.length) {
             clearInterval(timer)
-
-            const milestones = [5, 10, 15]
-            let mIndex = 0
-
-            const milestoneTimer = setInterval(() => {
-                const targetIndex = levels.findIndex(l => l.number === milestones[mIndex])
-                if (targetIndex !== -1) {
-                    activeIndex.value = targetIndex
-                }
-                mIndex++
-                if (mIndex >= milestones.length) {
-                    clearInterval(milestoneTimer)
-                    setTimeout(() => {
-                        visible.value = false
-                    }, 800)
-                }
-            }, 600)
+            setTimeout(() => {
+                emit('done')
+                window.dispatchEvent(new Event('ladder-done'))
+            }, 500)
         }
-    }, 300)
+    }, mode === 'milestones' ? 800 : 300)
 })
 </script>
 
