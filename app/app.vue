@@ -2,16 +2,14 @@
 
 useHead({
     bodyAttrs: {
-        class: 'text-white font-sans antialiased'
+        class: 'text-white font-sans antialiased overflow-hidden'
     }
 })
 </script>
 
 <template>
     <NuxtLayout>
-        <MillionaireBackground>
-            <NuxtPage />
-        </MillionaireBackground>
+        <NuxtPage />
     </NuxtLayout>
 </template>
 

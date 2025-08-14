@@ -31,13 +31,27 @@ onMounted(() => {
 
     let i = 0
     const timer = setInterval(() => {
-        activeIndex.value = i
+        activeIndex.value = levels.length - 1 - i
         i++
         if (i >= levels.length) {
             clearInterval(timer)
-            setTimeout(() => {
-                visible.value = false
-            }, 800)
+
+            const milestones = [5, 10, 15]
+            let mIndex = 0
+
+            const milestoneTimer = setInterval(() => {
+                const targetIndex = levels.findIndex(l => l.number === milestones[mIndex])
+                if (targetIndex !== -1) {
+                    activeIndex.value = targetIndex
+                }
+                mIndex++
+                if (mIndex >= milestones.length) {
+                    clearInterval(milestoneTimer)
+                    setTimeout(() => {
+                        visible.value = false
+                    }, 800)
+                }
+            }, 600)
         }
     }, 300)
 })
@@ -47,7 +61,7 @@ onMounted(() => {
     <transition name="slide-quiz">
         <div
             v-if="visible"
-            class="absolute right-0 top-1/2 -translate-y-1/2 w-64
+            class="absolute right-40 top-1/2 -translate-y-1/2 w-64
                bg-[#120733dd] backdrop-blur-md border border-white/20
                shadow-xl rounded-lg overflow-hidden z-10"
         >
@@ -60,7 +74,7 @@ onMounted(() => {
                         activeIndex === index
                             ? 'bg-yellow-400 text-black'
                             : level.milestone
-                                ? 'bg-[#1a103d] border border-yellow-300 text-[#fff8e7] shadow-[0_0_12px_rgba(250,204,21,0.5)] font-bold'
+                                ? 'bg-[#1a103d] text-[#fff8e7] shadow-[0_0_12px_rgba(250,204,21,0.5)] font-bold'
                                 : '',
                     ]"
                 >

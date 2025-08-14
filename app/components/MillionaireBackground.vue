@@ -2,7 +2,7 @@
 const audioEl = ref<HTMLAudioElement | null>(null)
 const isPlaying = ref(false)
 const volume = ref(0.5)
-const muted = ref(false)
+const muted = ref(true)
 let unlocked = false
 let ctx: AudioContext | null = null
 
@@ -86,7 +86,15 @@ watch([volume, muted], ([val, isMuted]) => {
         <div class="absolute inset-0 z-[1] pointer-events-none grid-mask" />
 
         <!-- Center ring + disc + title -->
-        <div class="relative z-[2] grid place-items-center size-[min(85vmin,720px)] aspect-square">
+        <div
+            class="
+                relative z-[2] grid place-items-center aspect-square
+                size-[min(85vmin,500px)]
+                sm:size-[min(90vmin,600px)]
+                lg:size-[min(100vmin,720px)]
+                xl:size-[min(110vmin,900px)]
+            "
+        >
             <div class="ring absolute inset-0 rounded-full" />
             <div class="disc absolute inset-[12%] rounded-full overflow-hidden">
                 <div class="sweep absolute inset-[-20%] pointer-events-none" />

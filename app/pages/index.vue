@@ -1,8 +1,9 @@
 <template>
-    <div>
+    <MillionaireBackground>
         <div class="text-[clamp(16px,2.6vmin,24px)] text-[var(--acc-2)]/90">
             Welcome to
         </div>
+
         <div
             class="font-extrabold text-[clamp(28px,6.8vmin,60px)] !bg-clip-text text-transparent animate-glow"
             style="background:linear-gradient(180deg,#fff,var(--acc-2),var(--acc-3)); text-shadow:0 0 24px #b388ff44,0 0 48px #f0abfc22;"
@@ -27,5 +28,5 @@
                 </NuxtLink>
             </span>
         </div>
-    </div>
+    </MillionaireBackground>
 </template>

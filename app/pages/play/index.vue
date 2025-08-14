@@ -1,5 +1,9 @@
 <template>
     <div>
-        <MillionaireGame />
+        <MillionaireBackground>
+            <MillionaireGame />
+        </MillionaireBackground>
+
+        <MillionaireQuiz />
     </div>
 </template>
