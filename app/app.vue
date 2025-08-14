@@ -9,9 +9,9 @@ useHead({
 
 <template>
     <NuxtLayout>
-        <QuizMillionaireBackground>
+        <MillionaireBackground>
             <NuxtPage />
-        </QuizMillionaireBackground>
+        </MillionaireBackground>
     </NuxtLayout>
 </template>
 

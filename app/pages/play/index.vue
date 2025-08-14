@@ -1,3 +1,5 @@
 <template>
-    Play
+    <div>
+        <MillionaireGame />
+    </div>
 </template>
