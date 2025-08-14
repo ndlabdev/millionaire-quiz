@@ -4,6 +4,7 @@ const ladderMode = ref<'none' | 'full' | 'milestones'>('none')
 
 <template>
     <div>
+        <Lifelines />
         <MCIntro
             @show-ladder="ladderMode = 'full'"
             @highlight-milestones="ladderMode = 'milestones'"
