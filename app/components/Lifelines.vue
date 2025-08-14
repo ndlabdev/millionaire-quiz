@@ -1,4 +1,23 @@
 <script setup lang="ts">
+const props = defineProps<{ highlight?: 'fifty' | 'phone' | 'audience' | null }>()
+
+const activeHighlight = ref<'fifty' | 'phone' | 'audience' | null>(null)
+
+const emit = defineEmits<{
+    (e: 'lifeline-done'): void
+}>()
+
+watch(() => props.highlight, (val) => {
+    if (val) {
+        activeHighlight.value = val
+        setTimeout(() => {
+            activeHighlight.value = null
+            emit('lifeline-done')
+            window.dispatchEvent(new Event('lifeline-done'))
+        }, 1200)
+    }
+})
+
 const usedLifelines = ref({
     fifty: false,
     phone: false,
@@ -33,6 +52,7 @@ function useAudience() {
         <button
             :disabled="usedLifelines.fifty"
             class="lifeline-btn"
+            :class="{ highlight: activeHighlight === 'fifty' }"
             @click="useFiftyFifty"
         >
             50:50
@@ -41,6 +61,7 @@ function useAudience() {
         <button
             :disabled="usedLifelines.phone"
             class="lifeline-btn"
+            :class="{ highlight: activeHighlight === 'phone' }"
             @click="usePhone"
         >
             📞
@@ -49,6 +70,7 @@ function useAudience() {
         <button
             :disabled="usedLifelines.audience"
             class="lifeline-btn"
+            :class="{ highlight: activeHighlight === 'audience' }"
             @click="useAudience"
         >
             👥
@@ -58,22 +80,29 @@ function useAudience() {
 
 <style scoped>
 .lifeline-btn {
-  background: transparent;
-  border: 2px solid #facc15;
-  color: #fff8e7;
-  font-weight: bold;
-  padding: 0.5rem 1.2rem;
-  border-radius: 9999px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+    background: transparent;
+    border: 2px solid #facc15;
+    color: #fff8e7;
+    font-weight: bold;
+    padding: 0.5rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 .lifeline-btn:hover:not(:disabled) {
-  background: #facc15;
-  color: #120733;
-  box-shadow: 0 0 10px #facc15;
+    background: #facc15;
+    color: #120733;
+    box-shadow: 0 0 15px #facc15;
 }
 .lifeline-btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.highlight {
+    background: #facc15 !important;
+    color: #120733 !important;
+    box-shadow: 0 0 20px #facc15, 0 0 40px #facc15;
+    transform: scale(1.1);
 }
 </style>
