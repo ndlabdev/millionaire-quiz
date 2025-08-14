@@ -4,7 +4,8 @@ import { ref, onMounted } from 'vue'
 const emit = defineEmits([
     'show-ladder',
     'highlight-milestones',
-    'highlight-lifeline'
+    'highlight-lifeline',
+    'start-game'
 ])
 
 const lines = [
@@ -17,12 +18,15 @@ const lines = [
     'First, the classic 50:50 — removing two wrong answers instantly.',
     'Next, Phone a Friend — call someone you trust for their insight.',
     'And finally, Ask the Audience — see what the crowd thinks.',
-    'Use them wisely!'
+    'Use them wisely!',
+    'Now… are you ready to begin?'
 ]
 
 const lineIndex = ref(0)
 const displayText = ref('')
 const typing = ref(false)
+const visible = ref(true)
+const showStartButton = ref(false)
 
 let typingInterval: number | null = null
 let skipResolve: (() => void) | null = null
@@ -67,6 +71,18 @@ function skipLine() {
     }
 }
 
+function skipAll() {
+    stopTyping()
+    displayText.value = lines[lines.length - 1]
+    showStartButton.value = true
+    lineIndex.value = lines.length - 1
+}
+
+function startGame() {
+    visible.value = false
+    emit('start-game')
+}
+
 function waitForLifelineDone() {
     return new Promise<void>((resolve) => {
         window.addEventListener('lifeline-done', () => resolve(), { once: true })
@@ -105,28 +121,66 @@ onMounted(async () => {
             emit('highlight-lifeline', 'audience')
             await waitForLifelineDone()
         }
+        if (i === lines.length - 1) {
+            showStartButton.value = true
+        }
         lineIndex.value++
     }
 })
 </script>
 
 <template>
-    <div class="fixed left-8 top-1/2 -translate-y-1/2 flex items-center gap-6 z-50">
-        <img
-            src="/mc-host.png"
-            alt="MC"
-            class="w-56 h-auto drop-shadow-lg"
+    <transition name="fade-mc">
+        <div
+            v-if="visible"
+            class="fixed left-8 top-1/2 -translate-y-1/2 flex items-center gap-6 z-50"
         >
-
-        <div class="bg-[#120733dd] backdrop-blur-md border border-yellow-400/50 rounded-lg p-4 max-w-sm text-white shadow-lg min-h-[100px] flex items-center text-lg leading-relaxed">
-            {{ displayText }}
-            <button
-                v-if="typing"
-                class="absolute -top-3 -right-3 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs shadow-lg hover:bg-yellow-500 transition"
-                @click="skipLine"
+            <img
+                src="/mc-host.png"
+                alt="MC"
+                class="w-56 h-auto drop-shadow-lg"
             >
-                Skip
-            </button>
+
+            <div class="relative">
+                <div class="bg-[#120733dd] backdrop-blur-md border border-yellow-400/50 rounded-lg p-4 max-w-sm text-white shadow-lg min-h-[100px] flex flex-col gap-4 text-lg leading-relaxed">
+                    <span>{{ displayText }}</span>
+
+                    <button
+                        v-if="showStartButton"
+                        class="self-center px-6 py-2 bg-yellow-400 text-black font-bold rounded-lg shadow-lg hover:bg-yellow-500 transition"
+                        @click="startGame"
+                    >
+                        Start Game
+                    </button>
+                </div>
+
+                <!-- Skip button -->
+                <button
+                    v-if="typing"
+                    class="absolute -bottom-3 -left-3 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs shadow-lg hover:bg-yellow-500 transition"
+                    @click="skipLine"
+                >
+                    Skip
+                </button>
+
+                <button
+                    v-if="typing"
+                    class="absolute -bottom-3 left-8 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs shadow-lg hover:bg-yellow-500 transition"
+                    @click="skipAll"
+                >
+                    Skip All
+                </button>
+            </div>
         </div>
-    </div>
+    </transition>
 </template>
+
+<style scoped>
+.fade-mc-leave-active {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-mc-leave-to {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+</style>
