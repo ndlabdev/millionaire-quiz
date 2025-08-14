@@ -84,9 +84,17 @@ onMounted(() => {
         <div class="scan absolute inset-0 z-[3] pointer-events-none" />
 
         <!-- Audio -->
-        <!-- <audio id="bgm" preload="auto" loop ref="audioEl">
-      <source src="/millionaire-theme.mp3" type="audio/mpeg" />
-    </audio> -->
+        <audio
+            id="bgm"
+            ref="audioEl"
+            preload="auto"
+            loop
+        >
+            <source
+                src="/millionaire-theme.mp3"
+                type="audio/mpeg"
+            >
+        </audio>
 
         <!-- Music toggle -->
         <button
