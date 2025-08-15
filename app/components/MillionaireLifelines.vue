@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{
     disabled?: boolean
+    canUseLifelines?: boolean
     highlight?: 'fifty' | 'phone' | 'audience' | null
 }>()
 
@@ -10,6 +11,12 @@ const emit = defineEmits<{
     (e: 'lifeline-done'): void
     (e: 'use-lifeline', type: 'fiftyFifty' | 'askAudience' | 'phoneFriend'): void
 }>()
+
+const localCanUseLifelines = ref(props.canUseLifelines ?? false)
+
+watch(() => props.canUseLifelines, (val) => {
+    localCanUseLifelines.value = val ?? false
+})
 
 watch(() => props.highlight, (val) => {
     if (val) {
@@ -57,7 +64,7 @@ function useAudience() {
            border border-yellow-400/40 shadow-lg"
     >
         <button
-            :disabled="usedLifelines.fifty"
+            :disabled="!localCanUseLifelines || usedLifelines.fifty"
             class="lifeline-btn"
             :class="{ highlight: activeHighlight === 'fifty' }"
             @click="useFiftyFifty"
@@ -66,7 +73,7 @@ function useAudience() {
         </button>
 
         <button
-            :disabled="usedLifelines.phone"
+            :disabled="!localCanUseLifelines || usedLifelines.phone"
             class="lifeline-btn"
             :class="{ highlight: activeHighlight === 'phone' }"
             @click="usePhone"
@@ -75,7 +82,7 @@ function useAudience() {
         </button>
 
         <button
-            :disabled="usedLifelines.audience"
+            :disabled="!localCanUseLifelines || usedLifelines.audience"
             class="lifeline-btn"
             :class="{ highlight: activeHighlight === 'audience' }"
             @click="useAudience"

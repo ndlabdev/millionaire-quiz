@@ -5,9 +5,14 @@ const lifelineHighlight = ref<'fifty' | 'phone' | 'audience' | null>(null)
 const showMC = ref(true)
 const showQuestion = ref(false)
 const lifelines = ref<'fiftyFifty' | 'askAudience' | 'phoneFriend'>()
+const canUseLifelines = ref(true)
 
 function handleHighlightLifeline(type: 'fifty' | 'phone' | 'audience') {
     lifelineHighlight.value = type
+}
+
+function handleCanUseLifeline(ready: boolean) {
+    canUseLifelines.value = ready
 }
 
 function startGame() {
@@ -24,6 +29,7 @@ function handleUseLifeline(type: 'fiftyFifty' | 'askAudience' | 'phoneFriend') {
     <div>
         <MillionaireLifelines
             :disabled="showMC"
+            :can-use-lifelines="canUseLifelines"
             :highlight="lifelineHighlight"
             @use-lifeline="handleUseLifeline"
             @lifeline-done="lifelineHighlight = null"
@@ -45,6 +51,7 @@ function handleUseLifeline(type: 'fiftyFifty' | 'askAudience' | 'phoneFriend') {
             v-if="showQuestion"
             class="fade-in"
             :lifelines="lifelines"
+            @lifelines-ready="handleCanUseLifeline"
         />
     </div>
 </template>

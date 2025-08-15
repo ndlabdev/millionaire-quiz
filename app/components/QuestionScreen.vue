@@ -42,8 +42,16 @@ const removedAnswers = ref<number[]>([])
 const audienceResult = ref<number[]>([])
 const phoneSuggestion = ref<number | null>(null)
 
+const canUseLifelines = ref(true)
+
+const emit = defineEmits<{ (e: 'lifelines-ready', ready: boolean): void }>()
+
 const props = defineProps<Props>()
 const lifelines = toRef(props, 'lifelines')
+
+watch(canUseLifelines, (val) => {
+    emit('lifelines-ready', val)
+})
 
 watch(lifelines, (val) => {
     if (!val || !currentQuestion.value) return
@@ -175,6 +183,8 @@ function typeLine(text: string) {
 async function playQuestion() {
     if (!currentQuestion.value) return
 
+    canUseLifelines.value = false
+
     removedAnswers.value = []
     audienceResult.value = []
     phoneSuggestion.value = null
@@ -191,6 +201,8 @@ async function playQuestion() {
         visibleAnswers.value[i] = true
         await speakText(`${answerLabels[i]} ${currentQuestion.value.answers[i]}`)
     }
+
+    canUseLifelines.value = true
 
     startCountdown(30)
 }
