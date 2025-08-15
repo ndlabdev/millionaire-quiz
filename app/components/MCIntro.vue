@@ -73,7 +73,7 @@ function skipLine() {
 
 function skipAll() {
     stopTyping()
-    displayText.value = lines[lines.length - 1]
+    displayText.value = lines[lines.length - 1] as string
     showStartButton.value = true
     lineIndex.value = lines.length - 1
 }
@@ -165,7 +165,7 @@ onMounted(async () => {
 
                 <button
                     v-if="typing"
-                    class="absolute -bottom-3 left-8 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs shadow-lg hover:bg-yellow-500 transition"
+                    class="absolute -bottom-3 text-nowrap left-8 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs shadow-lg hover:bg-yellow-500 transition"
                     @click="skipAll"
                 >
                     Skip All
