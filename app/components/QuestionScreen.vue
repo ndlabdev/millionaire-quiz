@@ -46,7 +46,10 @@ const canUseLifelines = ref(true)
 const showGameOver = ref(false)
 const gameOverMessage = ref('')
 
-const emit = defineEmits<{ (e: 'lifelines-ready', ready: boolean): void }>()
+const emit = defineEmits<{
+    (e: 'lifelines-ready', ready: boolean): void
+    (e: 'correct-answer', nextQuestion: number): void
+}>()
 
 const props = defineProps<Props>()
 const lifelines = toRef(props, 'lifelines')
@@ -190,19 +193,34 @@ function typeLine(text: string) {
 
 function handleTimeUp() {
     console.log('⏰ Time\'s up!')
-
-    // 1. Highlight the correct answer
-    selectedIndex.value = null // reset if already chosen
-    const correctIndex = currentQuestion.value?.correctIndex
-    if (typeof correctIndex === 'number') {
-        selectedIndex.value = correctIndex
-    }
-
-    // 2. After 2 seconds, show Game Over message
+    selectedIndex.value = currentQuestion.value?.correctIndex ?? null
     setTimeout(() => {
-        gameOverMessage.value = 'You ran out of time!'
-        showGameOver.value = true
+        handleGameOver('You ran out of time!')
     }, 2000)
+}
+
+function getPrizeAmount(level: number) {
+    const milestones = [
+        { level: 5, amount: 1000 },
+        { level: 10, amount: 32000 },
+        { level: 15, amount: 1000000 }
+    ]
+
+    let prize = 0
+    for (const m of milestones) {
+        if (level >= m.level) {
+            prize = m.amount
+        }
+    }
+    return prize
+}
+
+function handleGameOver(reason: string) {
+    const lastCorrect = currentIndex.value
+    const prize = getPrizeAmount(lastCorrect)
+    canUseLifelines.value = false
+    gameOverMessage.value = `${reason}\nYou won $${prize.toLocaleString()}`
+    showGameOver.value = true
 }
 
 // --- Play question ---
@@ -239,24 +257,24 @@ async function playQuestion() {
 function selectAnswer(index: number) {
     if (selectedIndex.value !== null) return
     selectedIndex.value = index
-
     const correctIndex = currentQuestion.value?.correctIndex
 
     if (index !== correctIndex) {
         setTimeout(() => {
             selectedIndex.value = correctIndex ?? null
         }, 500)
-
         setTimeout(() => {
-            gameOverMessage.value = 'Wrong answer!'
-            showGameOver.value = true
+            handleGameOver('Wrong answer!')
         }, 2000)
         return
     }
 
-    setTimeout(() => {
-        goToNextQuestion()
-    }, 2000)
+    if (index === currentQuestion.value?.correctIndex) {
+        emit('correct-answer', currentIndex.value + 1)
+        setTimeout(() => {
+            goToNextQuestion()
+        }, 2000)
+    }
 }
 
 // --- Next question ---
@@ -296,7 +314,7 @@ onMounted(() => {
         </div>
 
         <!-- Question counter -->
-        <div class="absolute top-4 left-6 text-lg font-semibold text-yellow-300">
+        <div class="text-lg font-semibold text-yellow-300">
             Question {{ currentIndex + 1 }} / {{ gameQuestions.length }}
         </div>
 
@@ -319,7 +337,7 @@ onMounted(() => {
                     '!bg-green-500 !text-white':
                         (index === currentQuestion?.correctIndex && isTimeUp)
                         || (selectedIndex !== null && index === currentQuestion?.correctIndex),
-                    '!bg-red-500 !text-white': selectedIndex === index && index !== currentQuestion?.correctIndex,
+                    '!bg-red-500 !text-white animate-shake': selectedIndex === index && index !== currentQuestion?.correctIndex,
                     '!ring-4 !ring-blue-400': phoneSuggestion === index,
                     'answer-crossed': removedAnswers.includes(index),
                 }"
@@ -385,5 +403,17 @@ onMounted(() => {
 
 .animate-flash {
     animation: flash 0.5s infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+}
+
+.animate-shake {
+    animation: shake 0.5s ease-in-out;
 }
 </style>

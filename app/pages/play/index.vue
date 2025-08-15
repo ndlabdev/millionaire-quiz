@@ -1,11 +1,12 @@
 <script setup lang="ts">
-const ladderMode = ref<'none' | 'full' | 'milestones'>('none')
+const ladderMode = ref<'none' | 'full' | 'milestones' | 'highlight'>('none')
 const lifelineHighlight = ref<'fifty' | 'phone' | 'audience' | null>(null)
 
 const showMC = ref(true)
 const showQuestion = ref(false)
 const lifelines = ref<'fiftyFifty' | 'askAudience' | 'phoneFriend'>()
 const canUseLifelines = ref(true)
+const highlightLevel = ref<number | null>(null)
 
 function handleHighlightLifeline(type: 'fifty' | 'phone' | 'audience') {
     lifelineHighlight.value = type
@@ -22,6 +23,20 @@ function startGame() {
 
 function handleUseLifeline(type: 'fiftyFifty' | 'askAudience' | 'phoneFriend') {
     lifelines.value = type
+}
+
+function handleCorrectAnswer(nextLevel: number) {
+    ladderMode.value = 'none'
+    nextTick(() => {
+        ladderMode.value = 'highlight'
+    })
+
+    highlightLevel.value = nextLevel
+
+    setTimeout(() => {
+        highlightLevel.value = null
+        ladderMode.value = 'none'
+    }, 1500)
 }
 </script>
 
@@ -43,6 +58,7 @@ function handleUseLifeline(type: 'fiftyFifty' | 'askAudience' | 'phoneFriend') {
         />
         <MillionaireBackground />
         <MillionaireQuiz
+            :highlight-level="highlightLevel"
             :mode="ladderMode"
             @done="ladderMode = 'none'"
         />
@@ -52,6 +68,7 @@ function handleUseLifeline(type: 'fiftyFifty' | 'askAudience' | 'phoneFriend') {
             class="fade-in"
             :lifelines="lifelines"
             @lifelines-ready="handleCanUseLifeline"
+            @correct-answer="handleCorrectAnswer"
         />
     </div>
 </template>

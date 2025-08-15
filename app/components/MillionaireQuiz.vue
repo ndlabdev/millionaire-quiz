@@ -7,7 +7,8 @@ interface QuestionLevel {
 }
 
 const props = defineProps<{
-    mode: 'none' | 'full' | 'milestones'
+    mode: 'none' | 'full' | 'milestones' | 'highlight'
+    highlightLevel?: number | null
 }>()
 
 const emit = defineEmits<{
@@ -58,10 +59,16 @@ watch(() => props.mode, (mode) => {
         step++
         if (step >= indices.length) {
             clearInterval(timer)
+
+            const holdTime
+                = props.mode === 'highlight' || props.highlightLevel
+                    ? 3500
+                    : 500
+
             setTimeout(() => {
                 emit('done')
                 window.dispatchEvent(new Event('ladder-done'))
-            }, 500)
+            }, holdTime)
         }
     }, mode === 'milestones' ? 800 : 300)
 })
@@ -83,9 +90,11 @@ watch(() => props.mode, (mode) => {
                     :class="[
                         activeIndex === index
                             ? 'bg-yellow-400 text-black'
-                            : level.milestone
-                                ? 'bg-[#1a103d] text-[#fff8e7] shadow-[0_0_12px_rgba(250,204,21,0.5)] font-bold'
-                                : '',
+                            : props.highlightLevel === level.number
+                                ? 'bg-green-500 text-white animate-pulse'
+                                : level.milestone
+                                    ? 'bg-[#1a103d] text-[#fff8e7] shadow-[0_0_12px_rgba(250,204,21,0.5)] font-bold'
+                                    : '',
                     ]"
                 >
                     <span>{{ level.number }}</span>
@@ -116,5 +125,13 @@ watch(() => props.mode, (mode) => {
 .slide-quiz-enter-active,
 .slide-quiz-leave-active {
     transition: all 0.6s ease;
+}
+
+@keyframes pulseHighlight {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+}
+.animate-pulse {
+    animation: pulseHighlight 0.8s infinite;
 }
 </style>
