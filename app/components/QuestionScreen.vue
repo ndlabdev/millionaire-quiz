@@ -149,14 +149,20 @@ function speakText(text: string, lang = 'en-US', rate = 1, pitch = 1.2) {
 }
 
 // --- Countdown ---
-function startCountdown(seconds: number) {
-    countdown.value = seconds
-    if (countdownTimer) clearInterval(countdownTimer)
+function stopCountdown() {
+    if (countdownTimer) {
+        clearInterval(countdownTimer)
+        countdownTimer = null
+    }
+}
 
+function startCountdown(seconds: number) {
+    stopCountdown()
+    countdown.value = seconds
     countdownTimer = window.setInterval(() => {
         countdown.value--
         if (countdown.value <= 0) {
-            clearInterval(countdownTimer!)
+            stopCountdown()
 
             // goToNextQuestion()
         }
@@ -182,6 +188,8 @@ function typeLine(text: string) {
 // --- Play question ---
 async function playQuestion() {
     if (!currentQuestion.value) return
+
+    stopCountdown()
 
     canUseLifelines.value = false
 
