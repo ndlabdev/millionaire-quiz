@@ -45,6 +45,10 @@ const isTimeUp = ref(false)
 const canUseLifelines = ref(true)
 const showGameOver = ref(false)
 const gameOverMessage = ref('')
+const isWaiting = ref(false)
+const waitingSound = new Audio('/waitingSound.m4a')
+const correctSound = new Audio('/correctSound.m4a')
+const wrongSound = new Audio('/wrongSound.m4a')
 
 const emit = defineEmits<{
     (e: 'lifelines-ready', ready: boolean): void
@@ -257,24 +261,40 @@ async function playQuestion() {
 function selectAnswer(index: number) {
     if (selectedIndex.value !== null) return
     selectedIndex.value = index
-    const correctIndex = currentQuestion.value?.correctIndex
+    stopCountdown()
 
-    if (index !== correctIndex) {
-        setTimeout(() => {
-            selectedIndex.value = correctIndex ?? null
-        }, 500)
-        setTimeout(() => {
-            handleGameOver('Wrong answer!')
-        }, 2000)
-        return
-    }
+    canUseLifelines.value = false
+    isWaiting.value = true
 
-    if (index === currentQuestion.value?.correctIndex) {
-        emit('correct-answer', currentIndex.value + 1)
+    playSound(waitingSound)
+
+    setTimeout(() => {
+        const correctIndex = currentQuestion.value?.correctIndex
+        const isCorrect = index === correctIndex
+
+        stopAllSounds()
+        isWaiting.value = false
+
+        if (isCorrect) {
+            playSound(correctSound)
+        } else {
+            playSound(wrongSound)
+
+            setTimeout(() => {
+                selectedIndex.value = correctIndex ?? null
+            }, 500)
+        }
+
         setTimeout(() => {
-            goToNextQuestion()
+            stopAllSounds()
+            if (isCorrect) {
+                emit('correct-answer', currentIndex.value + 1)
+                goToNextQuestion()
+            } else {
+                handleGameOver('Wrong answer!')
+            }
         }, 2000)
-    }
+    }, 4000)
 }
 
 // --- Next question ---
@@ -286,6 +306,8 @@ function handleVictory() {
 }
 
 function goToNextQuestion() {
+    stopAllSounds()
+
     currentIndex.value++
     if (currentIndex.value >= gameQuestions.value.length) {
         handleVictory()
@@ -342,9 +364,11 @@ onMounted(() => {
                 class="answer-btn"
                 :class="{
                     '!bg-green-500 !text-white':
-                        (index === currentQuestion?.correctIndex && isTimeUp)
-                        || (selectedIndex !== null && index === currentQuestion?.correctIndex),
-                    '!bg-red-500 !text-white animate-shake': selectedIndex === index && index !== currentQuestion?.correctIndex,
+                        !isWaiting && ((index === currentQuestion?.correctIndex && isTimeUp)
+                            || (selectedIndex !== null && index === currentQuestion?.correctIndex)),
+                    '!bg-red-500 !text-white animate-shake':
+                        !isWaiting && selectedIndex === index && index !== currentQuestion?.correctIndex,
+                    'waiting-pulse': isWaiting && selectedIndex === index,
                     '!ring-4 !ring-blue-400': phoneSuggestion === index,
                     'answer-crossed': removedAnswers.includes(index),
                 }"
@@ -422,5 +446,20 @@ onMounted(() => {
 
 .animate-shake {
     animation: shake 0.5s ease-in-out;
+}
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 10px #facc15, 0 0 20px #facc15, 0 0 30px #facc15;
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700, 0 0 60px #ffd700;
+        transform: scale(1.05);
+    }
+}
+
+.waiting-pulse {
+    animation: pulse-glow 1s infinite;
+    border-color: #facc15 !important;
 }
 </style>
