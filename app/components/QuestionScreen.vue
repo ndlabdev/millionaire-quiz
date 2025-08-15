@@ -43,6 +43,8 @@ const audienceResult = ref<number[]>([])
 const phoneSuggestion = ref<number | null>(null)
 const isTimeUp = ref(false)
 const canUseLifelines = ref(true)
+const showGameOver = ref(false)
+const gameOverMessage = ref('')
 
 const emit = defineEmits<{ (e: 'lifelines-ready', ready: boolean): void }>()
 
@@ -198,10 +200,8 @@ function handleTimeUp() {
 
     // 2. After 2 seconds, show Game Over message
     setTimeout(() => {
-        alert('❌ Time\'s up!\nGame Over.')
-
-        // TODO: emit to parent to show the Game Over screen
-        // emit('game-over') or router.push('/game-over')
+        gameOverMessage.value = 'You ran out of time!'
+        showGameOver.value = true
     }, 2000)
 }
 
@@ -239,6 +239,20 @@ async function playQuestion() {
 function selectAnswer(index: number) {
     if (selectedIndex.value !== null) return
     selectedIndex.value = index
+
+    const correctIndex = currentQuestion.value?.correctIndex
+
+    if (index !== correctIndex) {
+        setTimeout(() => {
+            selectedIndex.value = correctIndex ?? null
+        }, 500)
+
+        setTimeout(() => {
+            gameOverMessage.value = 'Wrong answer!'
+            showGameOver.value = true
+        }, 2000)
+        return
+    }
 
     setTimeout(() => {
         goToNextQuestion()
@@ -281,6 +295,11 @@ onMounted(() => {
             {{ countdown }}
         </div>
 
+        <!-- Question counter -->
+        <div class="absolute top-4 left-6 text-lg font-semibold text-yellow-300">
+            Question {{ currentIndex + 1 }} / {{ gameQuestions.length }}
+        </div>
+
         <!-- Question -->
         <div
             class="bg-[#120733dd] backdrop-blur-md border border-yellow-400/50 rounded-lg px-8 py-4 text-white text-xl max-w-3xl text-center shadow-lg"
@@ -310,6 +329,12 @@ onMounted(() => {
                 <span v-if="audienceResult.length"> — {{ audienceResult[index] }}%</span>
             </button>
         </div>
+
+        <GameOverModal
+            :show="showGameOver"
+            :message="gameOverMessage"
+            @restart="() => navigateTo('/')"
+        />
     </div>
 </template>
 
