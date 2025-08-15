@@ -278,10 +278,17 @@ function selectAnswer(index: number) {
 }
 
 // --- Next question ---
+function handleVictory() {
+    const prize = getPrizeAmount(15)
+    canUseLifelines.value = false
+    gameOverMessage.value = `🎉 Congratulations!\nYou won $${prize.toLocaleString()}`
+    showGameOver.value = true
+}
+
 function goToNextQuestion() {
     currentIndex.value++
     if (currentIndex.value >= gameQuestions.value.length) {
-        console.log('🎯 Game Over!')
+        handleVictory()
         return
     }
     playQuestion()
