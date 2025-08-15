@@ -1,49 +1,55 @@
 <script setup lang="ts">
+type Question = {
+    id: number
+    level: 'easy' | 'medium' | 'hard'
+    question: string
+    answers: string[]
+    correctIndex: number
+    money: number
+    hint?: string
+}
 
-function speakText(text: string, lang = 'en-US', rate = 1, pitch = 1.2) {
+// Fetch questions from API
+const { data: allQuestions } = await useFetch<Question[]>('/api/questions')
+
+// Sort questions: easy → medium → hard
+const gameQuestions = computed(() => {
+    if (!allQuestions.value) return []
+
+    const easy = shuffleArray(allQuestions.value.filter(q => q.level === 'easy')).slice(0, 5)
+    const medium = shuffleArray(allQuestions.value.filter(q => q.level === 'medium')).slice(0, 5)
+    const hard = shuffleArray(allQuestions.value.filter(q => q.level === 'hard')).slice(0, 5)
+
+    return [...easy, ...medium, ...hard]
+})
+
+const currentIndex = ref(0)
+const currentQuestion = computed(() => gameQuestions.value[currentIndex.value])
+
+const displayText = ref('')
+const visibleAnswers = ref([false, false, false, false])
+const selectedIndex = ref<number | null>(null)
+const countdown = ref(0)
+let countdownTimer: number | null = null
+const answerLabels = ['A:', 'B:', 'C:', 'D:']
+
+// --- Voice ---
+async function speakText(text: string, lang = 'en-US', rate = 1, pitch = 1.2) {
     return new Promise<void>((resolve) => {
-        if (!('speechSynthesis' in window)) {
-            console.warn('SpeechSynthesis API is not supported in this browser.')
-            resolve()
-            return
-        }
+        if (!('speechSynthesis' in window)) return resolve()
 
         const synth = window.speechSynthesis
         let voices: SpeechSynthesisVoice[] = []
 
         const loadVoices = () => {
             voices = synth.getVoices()
-
-            const femaleKeywords = [
-                'female', 'nữ', 'woman',
-                'Zira', 'Samantha', 'Eva', 'Joanna',
-                'Google US English Female', 'Google UK English Female'
-            ]
-
-            let voice = voices.find(v =>
-                v.lang === lang
-                && femaleKeywords.some(keyword =>
-                    v.name.toLowerCase().includes(keyword.toLowerCase())
-                )
-            )
-
-            if (!voice) {
-                voice = voices.find(v => v.lang === lang)
-            }
-
-            if (!voice) {
-                voice = voices[0]
-            }
-
-            console.log('🎤 Voice selected:', voice?.name)
-
+            const voice = voices.find(v => v.lang === lang) || voices[0]
             const utter = new SpeechSynthesisUtterance(text)
             utter.voice = voice || null
             utter.lang = lang
             utter.rate = rate
             utter.pitch = pitch
             utter.onend = () => resolve()
-
             synth.cancel()
             synth.speak(utter)
         }
@@ -56,42 +62,7 @@ function speakText(text: string, lang = 'en-US', rate = 1, pitch = 1.2) {
     })
 }
 
-const question = ref('Which planet is known as the Red Planet?')
-const answers = ref([
-    'A: Mercury',
-    'B: Venus',
-    'C: Mars',
-    'D: Jupiter'
-])
-
-const displayText = ref('')
-const visibleAnswers = ref([false, false, false, false])
-const selectedIndex = ref<number | null>(null)
-const correctIndex = 2
-const countdown = ref(0)
-let countdownTimer: number | null = null
-
-async function selectAnswer(index: number) {
-    if (selectedIndex.value !== null) return
-    selectedIndex.value = index
-
-    // playMusic(suspenseMusic, true)
-
-    // // Delay 3 giây như trên ghế nóng
-    // await new Promise(r => setTimeout(r, 3000))
-
-    // // Hiển thị đúng / sai
-    // if (index === correctIndex) {
-    //     playMusic(correctSound)
-    // } else {
-    //     playMusic(wrongSound)
-    // }
-
-    // // Delay thêm 2s rồi sang câu tiếp theo
-    // await new Promise(r => setTimeout(r, 2000))
-    // goToNextQuestion()
-}
-
+// --- Countdown ---
 function startCountdown(seconds: number) {
     countdown.value = seconds
     if (countdownTimer) clearInterval(countdownTimer)
@@ -100,11 +71,12 @@ function startCountdown(seconds: number) {
         countdown.value--
         if (countdown.value <= 0) {
             clearInterval(countdownTimer!)
-            console.log('⏰ Time’s up!')
+            goToNextQuestion()
         }
     }, 1000)
 }
 
+// --- Typewriter effect ---
 function typeLine(text: string) {
     return new Promise<void>((resolve) => {
         displayText.value = ''
@@ -120,18 +92,55 @@ function typeLine(text: string) {
     })
 }
 
-onMounted(async () => {
+// --- Play question ---
+async function playQuestion() {
+    if (!currentQuestion.value) return
+
+    selectedIndex.value = null
+    visibleAnswers.value = [false, false, false, false]
+
     await Promise.all([
-        speakText(question.value),
-        typeLine(question.value)
+        speakText(currentQuestion.value.question),
+        typeLine(currentQuestion.value.question)
     ])
 
-    for (let i = 0; i < answers.value.length; i++) {
+    for (let i = 0; i < currentQuestion.value.answers.length; i++) {
         visibleAnswers.value[i] = true
-        await speakText(answers.value[i]!)
+        await speakText(`${answerLabels[i]} ${currentQuestion.value.answers[i]}`)
     }
 
     startCountdown(30)
+}
+
+// --- Answer select ---
+function selectAnswer(index: number) {
+    if (selectedIndex.value !== null) return
+    selectedIndex.value = index
+
+    setTimeout(() => {
+        goToNextQuestion()
+    }, 2000)
+}
+
+// --- Next question ---
+function goToNextQuestion() {
+    currentIndex.value++
+    if (currentIndex.value >= gameQuestions.value.length) {
+        console.log('🎯 Game Over!')
+        return
+    }
+    playQuestion()
+}
+
+function shuffleArray<T>(array: T[]): T[] {
+    return array
+        .map(item => ({ item, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ item }) => item)
+}
+
+onMounted(() => {
+    playQuestion()
 })
 </script>
 
@@ -145,29 +154,29 @@ onMounted(async () => {
             {{ countdown }}
         </div>
 
+        <!-- Question -->
         <div
             class="bg-[#120733dd] backdrop-blur-md border border-yellow-400/50 rounded-lg px-8 py-4 text-white text-xl max-w-3xl text-center shadow-lg min-h-[80px]"
         >
             {{ displayText }}
         </div>
 
+        <!-- Answers -->
         <div class="grid grid-cols-2 gap-4 max-w-3xl w-full">
             <button
-                v-for="(answer, index) in answers"
+                v-for="(answer, index) in currentQuestion?.answers"
                 v-show="visibleAnswers[index]"
                 :key="answer"
                 :disabled="selectedIndex !== null"
                 class="bg-[#1a103d] border-2 border-yellow-400 text-[#fff8e7] text-lg px-6 py-4 rounded-md transition-all duration-300
-                    hover:bg-yellow-400 hover:text-[#120733] hover:shadow-[0_0_15px_#facc15]
-                    [&.selected]:bg-yellow-500 [&.correct]:bg-green-500 [&.wrong]:bg-red-500"
+          hover:bg-yellow-400 hover:text-[#120733] hover:shadow-[0_0_15px_#facc15]"
                 :class="{
-                    'bg-blue-500 text-white shadow-[0_0_15px_rgba(59,130,246,0.7)]': selectedIndex === index && index !== correctIndex,
-                    'bg-green-500 text-white shadow-[0_0_20px_rgba(34,197,94,0.8)]': selectedIndex !== null && index === correctIndex,
-                    'bg-red-500 text-white shadow-[0_0_20px_rgba(239,68,68,0.8)]': selectedIndex === index && index !== correctIndex,
+                    'bg-green-500 text-white': selectedIndex !== null && index === currentQuestion?.correctIndex,
+                    'bg-red-500 text-white': selectedIndex === index && index !== currentQuestion?.correctIndex,
                 }"
                 @click="selectAnswer(index)"
             >
-                {{ answer }}
+                {{ answerLabels[index] }} {{ answer }}
             </button>
         </div>
     </div>

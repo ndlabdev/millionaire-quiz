@@ -1,0 +1,4502 @@
+[
+  {
+    "id": 1,
+    "level": "easy",
+    "question": "What is the capital of France?",
+    "answers": ["Paris", "London", "Berlin", "Madrid"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "The city of the Eiffel Tower"
+  },
+  {
+    "id": 2,
+    "level": "easy",
+    "question": "Which planet is known as the Red Planet?",
+    "answers": ["Mercury", "Venus", "Mars", "Jupiter"],
+    "correctIndex": 2,
+    "money": 200,
+    "hint": "Fourth planet from the Sun"
+  },
+  {
+    "id": 3,
+    "level": "easy",
+    "question": "How many continents are there on Earth?",
+    "answers": ["5", "6", "7", "8"],
+    "correctIndex": 2,
+    "money": 300,
+    "hint": "More than six"
+  },
+  {
+    "id": 4,
+    "level": "easy",
+    "question": "Which animal is known as the 'King of the Jungle'?",
+    "answers": ["Tiger", "Lion", "Elephant", "Leopard"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Big cat with a mane"
+  },
+  {
+    "id": 5,
+    "level": "easy",
+    "question": "What is 5 + 3?",
+    "answers": ["6", "7", "8", "9"],
+    "correctIndex": 2,
+    "money": 1000,
+    "hint": "Single digit number"
+  },
+  {
+    "id": 6,
+    "level": "medium",
+    "question": "Who wrote the play 'Romeo and Juliet'?",
+    "answers": ["William Shakespeare", "Charles Dickens", "Leo Tolstoy", "Mark Twain"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Famous English playwright"
+  },
+  {
+    "id": 7,
+    "level": "medium",
+    "question": "Which gas do plants absorb from the atmosphere?",
+    "answers": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "CO₂"
+  },
+  {
+    "id": 8,
+    "level": "medium",
+    "question": "What is the largest ocean on Earth?",
+    "answers": ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean", "Arctic Ocean"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Covers more than 30% of Earth's surface"
+  },
+  {
+    "id": 9,
+    "level": "medium",
+    "question": "In which year did the Titanic sink?",
+    "answers": ["1905", "1912", "1920", "1898"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Early 20th century"
+  },
+  {
+    "id": 10,
+    "level": "medium",
+    "question": "What is the chemical symbol for water?",
+    "answers": ["H2O", "O2", "CO2", "NaCl"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Two hydrogen atoms, one oxygen atom"
+  },
+  {
+    "id": 11,
+    "level": "hard",
+    "question": "Who was the first person to step on the Moon?",
+    "answers": ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "Michael Collins"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Year 1969"
+  },
+  {
+    "id": 12,
+    "level": "hard",
+    "question": "Which element has the chemical symbol 'Au'?",
+    "answers": ["Gold", "Silver", "Copper", "Aluminum"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "Precious metal"
+  },
+  {
+    "id": 13,
+    "level": "hard",
+    "question": "Which country hosted the first modern Olympic Games in 1896?",
+    "answers": ["Greece", "France", "Italy", "USA"],
+    "correctIndex": 0,
+    "money": 250000,
+    "hint": "Birthplace of the Olympics"
+  },
+  {
+    "id": 14,
+    "level": "hard",
+    "question": "What is the smallest prime number?",
+    "answers": ["0", "1", "2", "3"],
+    "correctIndex": 2,
+    "money": 500000,
+    "hint": "Even prime number"
+  },
+  {
+    "id": 15,
+    "level": "hard",
+    "question": "Which scientist developed the theory of relativity?",
+    "answers": ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Stephen Hawking"],
+    "correctIndex": 1,
+    "money": 1000000,
+    "hint": "E = mc²"
+  },
+  {
+    "id": 16,
+    "level": "easy",
+    "question": "Which fruit is yellow and curved?",
+    "answers": ["Apple", "Banana", "Grapes", "Orange"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Often found in bunches"
+  },
+  {
+    "id": 17,
+    "level": "easy",
+    "question": "Which animal barks?",
+    "answers": ["Cat", "Dog", "Cow", "Horse"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Man's best friend"
+  },
+  {
+    "id": 18,
+    "level": "easy",
+    "question": "What is the opposite of 'cold'?",
+    "answers": ["Hot", "Warm", "Cool", "Chill"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "Boiling water feels this way"
+  },
+  {
+    "id": 19,
+    "level": "easy",
+    "question": "Which season comes after spring?",
+    "answers": ["Autumn", "Winter", "Summer", "Monsoon"],
+    "correctIndex": 2,
+    "money": 500,
+    "hint": "Hot and sunny"
+  },
+  {
+    "id": 20,
+    "level": "easy",
+    "question": "Which day comes after Friday?",
+    "answers": ["Saturday", "Thursday", "Sunday", "Monday"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Weekend day"
+  },
+  {
+    "id": 21,
+    "level": "medium",
+    "question": "What is the currency of Japan?",
+    "answers": ["Dollar", "Yen", "Won", "Euro"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "¥"
+  },
+  {
+    "id": 22,
+    "level": "medium",
+    "question": "Which planet has the most moons?",
+    "answers": ["Earth", "Mars", "Saturn", "Jupiter"],
+    "correctIndex": 2,
+    "money": 4000,
+    "hint": "Gas giant with rings"
+  },
+  {
+    "id": 23,
+    "level": "medium",
+    "question": "What is the tallest mountain in the world?",
+    "answers": ["K2", "Everest", "Kangchenjunga", "Makalu"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Over 8,800 meters"
+  },
+  {
+    "id": 24,
+    "level": "medium",
+    "question": "Who invented the telephone?",
+    "answers": ["Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "Guglielmo Marconi"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Scottish-born inventor"
+  },
+  {
+    "id": 25,
+    "level": "medium",
+    "question": "Which blood type is known as the universal donor?",
+    "answers": ["O-", "O+", "A-", "AB+"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Negative type"
+  },
+  {
+    "id": 26,
+    "level": "hard",
+    "question": "Which is the longest river in the world?",
+    "answers": ["Nile", "Amazon", "Yangtze", "Mississippi"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Located in Africa"
+  },
+  {
+    "id": 27,
+    "level": "hard",
+    "question": "In which year did World War II end?",
+    "answers": ["1944", "1945", "1946", "1947"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Same year atomic bombs were dropped"
+  },
+  {
+    "id": 28,
+    "level": "hard",
+    "question": "Which is the rarest blood type?",
+    "answers": ["O-", "AB-", "B-", "A+"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Negative and uncommon"
+  },
+  {
+    "id": 29,
+    "level": "hard",
+    "question": "Which country produces the most coffee in the world?",
+    "answers": ["Vietnam", "Colombia", "Brazil", "Ethiopia"],
+    "correctIndex": 2,
+    "money": 500000,
+    "hint": "South American giant"
+  },
+  {
+    "id": 30,
+    "level": "hard",
+    "question": "What is the square root of 144?",
+    "answers": ["10", "11", "12", "13"],
+    "correctIndex": 2,
+    "money": 1000000,
+    "hint": "Two-digit number"
+  },
+  {
+    "id": 31,
+    "level": "easy",
+    "question": "Which shape has three sides?",
+    "answers": ["Triangle", "Square", "Circle", "Rectangle"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Common shape in geometry class"
+  },
+  {
+    "id": 32,
+    "level": "easy",
+    "question": "Which color do you get by mixing red and blue?",
+    "answers": ["Green", "Purple", "Orange", "Brown"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Also called violet"
+  },
+  {
+    "id": 33,
+    "level": "easy",
+    "question": "What do bees produce?",
+    "answers": ["Milk", "Honey", "Silk", "Wax"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Sweet and sticky"
+  },
+  {
+    "id": 34,
+    "level": "easy",
+    "question": "How many minutes are in an hour?",
+    "answers": ["30", "45", "60", "90"],
+    "correctIndex": 2,
+    "money": 500,
+    "hint": "Multiple of 15"
+  },
+  {
+    "id": 35,
+    "level": "easy",
+    "question": "Which instrument has keys, pedals, and strings?",
+    "answers": ["Guitar", "Piano", "Flute", "Drum"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Often used in classical music"
+  },
+  {
+    "id": 36,
+    "level": "medium",
+    "question": "Which metal is liquid at room temperature?",
+    "answers": ["Mercury", "Iron", "Aluminum", "Lead"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Symbol Hg"
+  },
+  {
+    "id": 37,
+    "level": "medium",
+    "question": "What is the largest internal organ in the human body?",
+    "answers": ["Heart", "Liver", "Lungs", "Kidneys"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Helps detoxify blood"
+  },
+  {
+    "id": 38,
+    "level": "medium",
+    "question": "Which country gifted the Statue of Liberty to the USA?",
+    "answers": ["France", "UK", "Germany", "Canada"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Eiffel Tower country"
+  },
+  {
+    "id": 39,
+    "level": "medium",
+    "question": "What is the fastest land animal?",
+    "answers": ["Cheetah", "Lion", "Horse", "Greyhound"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Can run up to 100 km/h"
+  },
+  {
+    "id": 40,
+    "level": "medium",
+    "question": "Which part of the cell contains genetic material?",
+    "answers": ["Nucleus", "Mitochondria", "Ribosome", "Cytoplasm"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Control center of the cell"
+  },
+  {
+    "id": 41,
+    "level": "hard",
+    "question": "Who painted the Mona Lisa?",
+    "answers": ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Claude Monet"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Renaissance polymath"
+  },
+  {
+    "id": 42,
+    "level": "hard",
+    "question": "Which country has the longest coastline in the world?",
+    "answers": ["Australia", "Canada", "Russia", "Indonesia"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Country with maple leaf flag"
+  },
+  {
+    "id": 43,
+    "level": "hard",
+    "question": "What is the hardest natural substance on Earth?",
+    "answers": ["Gold", "Diamond", "Platinum", "Quartz"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Used in cutting tools"
+  },
+  {
+    "id": 44,
+    "level": "hard",
+    "question": "In computing, what does 'CPU' stand for?",
+    "answers": ["Central Processing Unit", "Computer Personal Unit", "Central Power Unit", "Control Processing Unit"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "Brain of the computer"
+  },
+  {
+    "id": 45,
+    "level": "hard",
+    "question": "Which scientist discovered penicillin?",
+    "answers": ["Alexander Fleming", "Louis Pasteur", "Marie Curie", "Joseph Lister"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Discovery made in 1928"
+  },
+  {
+    "id": 46,
+    "level": "easy",
+    "question": "What do cows drink?",
+    "answers": ["Milk", "Water", "Juice", "Soda"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Essential for all animals"
+  },
+  {
+    "id": 47,
+    "level": "easy",
+    "question": "Which month has 28 days?",
+    "answers": ["February", "All months", "January", "June"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Trick question"
+  },
+  {
+    "id": 48,
+    "level": "easy",
+    "question": "What is the color of a ripe strawberry?",
+    "answers": ["Red", "Green", "Yellow", "Blue"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "Same as a stop sign"
+  },
+  {
+    "id": 49,
+    "level": "easy",
+    "question": "How many hours are in a day?",
+    "answers": ["12", "24", "36", "48"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Twice 12"
+  },
+  {
+    "id": 50,
+    "level": "easy",
+    "question": "Which planet is closest to the Sun?",
+    "answers": ["Mercury", "Venus", "Earth", "Mars"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Smallest planet in our solar system"
+  },
+  {
+    "id": 51,
+    "level": "medium",
+    "question": "Which ocean lies between Africa and Australia?",
+    "answers": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Named after a country"
+  },
+  {
+    "id": 52,
+    "level": "medium",
+    "question": "What is the currency of the United Kingdom?",
+    "answers": ["Dollar", "Euro", "Pound Sterling", "Franc"],
+    "correctIndex": 2,
+    "money": 4000,
+    "hint": "Symbol £"
+  },
+  {
+    "id": 53,
+    "level": "medium",
+    "question": "Who painted 'Starry Night'?",
+    "answers": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Dutch post-impressionist"
+  },
+  {
+    "id": 54,
+    "level": "medium",
+    "question": "Which part of the plant conducts photosynthesis?",
+    "answers": ["Roots", "Leaves", "Stems", "Flowers"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Green and flat"
+  },
+  {
+    "id": 55,
+    "level": "medium",
+    "question": "Which is the largest desert in the world?",
+    "answers": ["Sahara", "Gobi", "Arctic", "Antarctic"],
+    "correctIndex": 3,
+    "money": 32000,
+    "hint": "Not hot but frozen"
+  },
+  {
+    "id": 56,
+    "level": "hard",
+    "question": "Who developed the polio vaccine?",
+    "answers": ["Jonas Salk", "Alexander Fleming", "Louis Pasteur", "Edward Jenner"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Introduced in 1955"
+  },
+  {
+    "id": 57,
+    "level": "hard",
+    "question": "Which planet has a day longer than its year?",
+    "answers": ["Mercury", "Venus", "Mars", "Neptune"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Hottest planet in solar system"
+  },
+  {
+    "id": 58,
+    "level": "hard",
+    "question": "In which year did the Berlin Wall fall?",
+    "answers": ["1985", "1987", "1989", "1991"],
+    "correctIndex": 2,
+    "money": 250000,
+    "hint": "End of the Cold War era"
+  },
+  {
+    "id": 59,
+    "level": "hard",
+    "question": "Which is the largest moon of Saturn?",
+    "answers": ["Europa", "Titan", "Ganymede", "Callisto"],
+    "correctIndex": 1,
+    "money": 500000,
+    "hint": "Larger than Mercury"
+  },
+  {
+    "id": 60,
+    "level": "hard",
+    "question": "Which scientist proposed the three laws of motion?",
+    "answers": ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Johannes Kepler"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Also discovered gravity"
+  },
+  {
+    "id": 61,
+    "level": "easy",
+    "question": "What is H2O commonly known as?",
+    "answers": ["Oxygen", "Water", "Hydrogen", "Salt"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Covers 70% of Earth's surface"
+  },
+  {
+    "id": 62,
+    "level": "easy",
+    "question": "How many legs does a spider have?",
+    "answers": ["6", "8", "10", "12"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "More than an insect"
+  },
+  {
+    "id": 63,
+    "level": "easy",
+    "question": "Which fruit is known for keeping the doctor away?",
+    "answers": ["Banana", "Apple", "Orange", "Grapes"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Red or green"
+  },
+  {
+    "id": 64,
+    "level": "easy",
+    "question": "What do you call frozen water?",
+    "answers": ["Steam", "Ice", "Snow", "Frost"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Solid form of water"
+  },
+  {
+    "id": 65,
+    "level": "easy",
+    "question": "How many days are in a leap year?",
+    "answers": ["365", "366", "367", "368"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "One extra day in February"
+  },
+  {
+    "id": 66,
+    "level": "medium",
+    "question": "Which country is famous for the maple leaf?",
+    "answers": ["USA", "Canada", "Australia", "New Zealand"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Has provinces, not states"
+  },
+  {
+    "id": 67,
+    "level": "medium",
+    "question": "Which organ pumps blood through the body?",
+    "answers": ["Lungs", "Heart", "Liver", "Brain"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Beats continuously"
+  },
+  {
+    "id": 68,
+    "level": "medium",
+    "question": "What is the capital of Japan?",
+    "answers": ["Kyoto", "Tokyo", "Osaka", "Nagoya"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Largest city in the country"
+  },
+  {
+    "id": 69,
+    "level": "medium",
+    "question": "Which vitamin is produced when the skin is exposed to sunlight?",
+    "answers": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin E"],
+    "correctIndex": 2,
+    "money": 16000,
+    "hint": "Helps with calcium absorption"
+  },
+  {
+    "id": 70,
+    "level": "medium",
+    "question": "In which city is the Eiffel Tower located?",
+    "answers": ["Rome", "Paris", "Berlin", "Madrid"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "City of Love"
+  },
+  {
+    "id": 71,
+    "level": "hard",
+    "question": "What is the capital of Iceland?",
+    "answers": ["Oslo", "Reykjavik", "Helsinki", "Copenhagen"],
+    "correctIndex": 1,
+    "money": 64000,
+    "hint": "Northernmost capital of a sovereign state"
+  },
+  {
+    "id": 72,
+    "level": "hard",
+    "question": "Which gas is most abundant in Earth's atmosphere?",
+    "answers": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Argon"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Makes up about 78%"
+  },
+  {
+    "id": 73,
+    "level": "hard",
+    "question": "What is the capital of New Zealand?",
+    "answers": ["Auckland", "Wellington", "Christchurch", "Hamilton"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Located at the southern tip of North Island"
+  },
+  {
+    "id": 74,
+    "level": "hard",
+    "question": "Who is the author of 'The Origin of Species'?",
+    "answers": ["Charles Darwin", "Gregor Mendel", "Alfred Wallace", "Louis Pasteur"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "Father of evolution theory"
+  },
+  {
+    "id": 75,
+    "level": "hard",
+    "question": "Which scientist is known for the laws of planetary motion?",
+    "answers": ["Galileo Galilei", "Johannes Kepler", "Isaac Newton", "Tycho Brahe"],
+    "correctIndex": 1,
+    "money": 1000000,
+    "hint": "German astronomer"
+  },
+  {
+    "id": 76,
+    "level": "easy",
+    "question": "How many colors are in a rainbow?",
+    "answers": ["5", "6", "7", "8"],
+    "correctIndex": 2,
+    "money": 100,
+    "hint": "More than six"
+  },
+  {
+    "id": 77,
+    "level": "easy",
+    "question": "Which animal is the largest in the world?",
+    "answers": ["Elephant", "Blue Whale", "Shark", "Giraffe"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Lives in the ocean"
+  },
+  {
+    "id": 78,
+    "level": "easy",
+    "question": "What do plants need for photosynthesis besides sunlight and water?",
+    "answers": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Chlorophyll"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "CO₂"
+  },
+  {
+    "id": 79,
+    "level": "easy",
+    "question": "Which planet is known for its rings?",
+    "answers": ["Jupiter", "Saturn", "Neptune", "Uranus"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Gas giant"
+  },
+  {
+    "id": 80,
+    "level": "easy",
+    "question": "Which continent is Egypt in?",
+    "answers": ["Asia", "Africa", "Europe", "Australia"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Same as South Africa"
+  },
+  {
+    "id": 81,
+    "level": "medium",
+    "question": "Who painted the ceiling of the Sistine Chapel?",
+    "answers": ["Leonardo da Vinci", "Michelangelo", "Raphael", "Donatello"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Also a sculptor"
+  },
+  {
+    "id": 82,
+    "level": "medium",
+    "question": "Which is the smallest country in the world?",
+    "answers": ["Monaco", "Vatican City", "San Marino", "Liechtenstein"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Inside Rome"
+  },
+  {
+    "id": 83,
+    "level": "medium",
+    "question": "Which is the only mammal capable of true flight?",
+    "answers": ["Flying squirrel", "Bat", "Owl", "Pigeon"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Often associated with vampires"
+  },
+  {
+    "id": 84,
+    "level": "medium",
+    "question": "What is the largest planet in our solar system?",
+    "answers": ["Saturn", "Jupiter", "Uranus", "Neptune"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Named after Roman king of gods"
+  },
+  {
+    "id": 85,
+    "level": "medium",
+    "question": "In computing, what does 'HTTP' stand for?",
+    "answers": ["HyperText Transfer Protocol", "High Transfer Text Process", "Hyper Transfer Text Program", "Hyper Tool Transfer Protocol"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Used in web addresses"
+  },
+  {
+    "id": 86,
+    "level": "hard",
+    "question": "Which is the deepest ocean trench in the world?",
+    "answers": ["Puerto Rico Trench", "Tonga Trench", "Mariana Trench", "Java Trench"],
+    "correctIndex": 2,
+    "money": 64000,
+    "hint": "Over 10,000 meters deep"
+  },
+  {
+    "id": 87,
+    "level": "hard",
+    "question": "Which is the fastest bird in the world?",
+    "answers": ["Golden Eagle", "Peregrine Falcon", "Ostrich", "Albatross"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Can dive over 300 km/h"
+  },
+  {
+    "id": 88,
+    "level": "hard",
+    "question": "What is the boiling point of water at sea level in Celsius?",
+    "answers": ["90", "95", "100", "105"],
+    "correctIndex": 2,
+    "money": 250000,
+    "hint": "Three-digit number"
+  },
+  {
+    "id": 89,
+    "level": "hard",
+    "question": "Which ancient wonder was located in Babylon?",
+    "answers": ["Pyramids of Giza", "Hanging Gardens", "Colossus of Rhodes", "Temple of Artemis"],
+    "correctIndex": 1,
+    "money": 500000,
+    "hint": "Terraced gardens"
+  },
+  {
+    "id": 90,
+    "level": "hard",
+    "question": "Who discovered radium?",
+    "answers": ["Marie Curie", "Pierre Curie", "Ernest Rutherford", "Niels Bohr"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Female Nobel Prize winner"
+  },
+  {
+    "id": 91,
+    "level": "easy",
+    "question": "Which shape has four equal sides?",
+    "answers": ["Triangle", "Square", "Rectangle", "Pentagon"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "90-degree angles"
+  },
+  {
+    "id": 92,
+    "level": "easy",
+    "question": "Which insect makes a buzzing sound?",
+    "answers": ["Bee", "Butterfly", "Ant", "Grasshopper"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Produces honey"
+  },
+  {
+    "id": 93,
+    "level": "easy",
+    "question": "Which direction does the sun rise?",
+    "answers": ["North", "South", "East", "West"],
+    "correctIndex": 2,
+    "money": 300,
+    "hint": "Opposite of west"
+  },
+  {
+    "id": 94,
+    "level": "easy",
+    "question": "Which animal has a trunk?",
+    "answers": ["Rhino", "Elephant", "Hippo", "Camel"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Largest land animal"
+  },
+  {
+    "id": 95,
+    "level": "easy",
+    "question": "Which planet is called the Blue Planet?",
+    "answers": ["Mars", "Earth", "Neptune", "Uranus"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Has oceans"
+  },
+  {
+    "id": 96,
+    "level": "medium",
+    "question": "Which element has the chemical symbol 'Fe'?",
+    "answers": ["Fluorine", "Iron", "Francium", "Fermium"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Used to make steel"
+  },
+  {
+    "id": 97,
+    "level": "medium",
+    "question": "What is the capital city of Australia?",
+    "answers": ["Sydney", "Melbourne", "Canberra", "Perth"],
+    "correctIndex": 2,
+    "money": 4000,
+    "hint": "Not the most famous city"
+  },
+  {
+    "id": 98,
+    "level": "medium",
+    "question": "Which country invented pizza?",
+    "answers": ["France", "Italy", "Greece", "USA"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Home of Rome"
+  },
+  {
+    "id": 99,
+    "level": "medium",
+    "question": "Which sea separates Europe and Africa?",
+    "answers": ["Red Sea", "Black Sea", "Mediterranean Sea", "Baltic Sea"],
+    "correctIndex": 2,
+    "money": 16000,
+    "hint": "Connected to the Atlantic Ocean"
+  },
+  {
+    "id": 100,
+    "level": "medium",
+    "question": "What is the main language spoken in Brazil?",
+    "answers": ["Spanish", "Portuguese", "French", "English"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "Not Spanish"
+  },
+  {
+    "id": 101,
+    "level": "easy",
+    "question": "Which color is made by mixing yellow and blue?",
+    "answers": ["Green", "Orange", "Purple", "Brown"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Also the color of grass"
+  },
+  {
+    "id": 102,
+    "level": "easy",
+    "question": "Which animal lays eggs?",
+    "answers": ["Dog", "Cat", "Chicken", "Horse"],
+    "correctIndex": 2,
+    "money": 200,
+    "hint": "Farm animal"
+  },
+  {
+    "id": 103,
+    "level": "easy",
+    "question": "How many continents are there?",
+    "answers": ["5", "6", "7", "8"],
+    "correctIndex": 2,
+    "money": 300,
+    "hint": "More than six"
+  },
+  {
+    "id": 104,
+    "level": "easy",
+    "question": "What is the capital of Italy?",
+    "answers": ["Milan", "Rome", "Venice", "Florence"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Home of the Colosseum"
+  },
+  {
+    "id": 105,
+    "level": "easy",
+    "question": "What shape is a stop sign?",
+    "answers": ["Hexagon", "Octagon", "Pentagon", "Square"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Has 8 sides"
+  },
+  {
+    "id": 106,
+    "level": "medium",
+    "question": "What is the smallest planet in our solar system?",
+    "answers": ["Pluto", "Mercury", "Mars", "Venus"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Closest to the Sun"
+  },
+  {
+    "id": 107,
+    "level": "medium",
+    "question": "Which continent is the Sahara Desert in?",
+    "answers": ["Asia", "Africa", "Australia", "South America"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Same continent as Egypt"
+  },
+  {
+    "id": 108,
+    "level": "medium",
+    "question": "What is the currency of China?",
+    "answers": ["Yuan", "Yen", "Won", "Ringgit"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Also called Renminbi"
+  },
+  {
+    "id": 109,
+    "level": "medium",
+    "question": "Which blood type is the universal recipient?",
+    "answers": ["O-", "O+", "AB+", "AB-"],
+    "correctIndex": 2,
+    "money": 16000,
+    "hint": "Positive type"
+  },
+  {
+    "id": 110,
+    "level": "medium",
+    "question": "What is the longest bone in the human body?",
+    "answers": ["Femur", "Tibia", "Humerus", "Fibula"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Located in the thigh"
+  },
+  {
+    "id": 111,
+    "level": "hard",
+    "question": "Which country was formerly known as Persia?",
+    "answers": ["Iran", "Iraq", "Turkey", "Afghanistan"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Changed name in 1935"
+  },
+  {
+    "id": 112,
+    "level": "hard",
+    "question": "Which physicist developed the uncertainty principle?",
+    "answers": ["Heisenberg", "Planck", "Bohr", "Schrödinger"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "German scientist"
+  },
+  {
+    "id": 113,
+    "level": "hard",
+    "question": "Which city hosted the 2008 Summer Olympics?",
+    "answers": ["London", "Beijing", "Athens", "Sydney"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Capital of China"
+  },
+  {
+    "id": 114,
+    "level": "hard",
+    "question": "Which element has the atomic number 1?",
+    "answers": ["Helium", "Hydrogen", "Oxygen", "Carbon"],
+    "correctIndex": 1,
+    "money": 500000,
+    "hint": "Lightest element"
+  },
+  {
+    "id": 115,
+    "level": "hard",
+    "question": "Which country has the largest population?",
+    "answers": ["China", "India", "USA", "Indonesia"],
+    "correctIndex": 1,
+    "money": 1000000,
+    "hint": "Surpassed China in 2023"
+  },
+  {
+    "id": 116,
+    "level": "easy",
+    "question": "What is 10 × 10?",
+    "answers": ["50", "100", "200", "1000"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Two-digit square number"
+  },
+  {
+    "id": 117,
+    "level": "easy",
+    "question": "Which bird is a symbol of peace?",
+    "answers": ["Dove", "Eagle", "Crow", "Peacock"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "White bird"
+  },
+  {
+    "id": 118,
+    "level": "easy",
+    "question": "Which fruit has seeds on its outer skin?",
+    "answers": ["Apple", "Strawberry", "Banana", "Peach"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Red and sweet"
+  },
+  {
+    "id": 119,
+    "level": "easy",
+    "question": "Which day comes before Monday?",
+    "answers": ["Saturday", "Sunday", "Friday", "Tuesday"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Weekend day"
+  },
+  {
+    "id": 120,
+    "level": "easy",
+    "question": "Which ocean is the smallest?",
+    "answers": ["Indian", "Atlantic", "Arctic", "Pacific"],
+    "correctIndex": 2,
+    "money": 1000,
+    "hint": "Located at the North Pole"
+  },
+  {
+    "id": 121,
+    "level": "medium",
+    "question": "Who is known as the father of computers?",
+    "answers": ["Charles Babbage", "Alan Turing", "Bill Gates", "Steve Jobs"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Designed the Analytical Engine"
+  },
+  {
+    "id": 122,
+    "level": "medium",
+    "question": "Which metal is used to make coins along with copper?",
+    "answers": ["Silver", "Zinc", "Gold", "Lead"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Also used in galvanization"
+  },
+  {
+    "id": 123,
+    "level": "medium",
+    "question": "Which is the second largest country by area?",
+    "answers": ["China", "Canada", "Russia", "USA"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "North American country"
+  },
+  {
+    "id": 124,
+    "level": "medium",
+    "question": "What is the currency of South Korea?",
+    "answers": ["Yuan", "Won", "Yen", "Baht"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Symbol ₩"
+  },
+  {
+    "id": 125,
+    "level": "medium",
+    "question": "What is the largest island in the world?",
+    "answers": ["Greenland", "New Guinea", "Borneo", "Madagascar"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Owned by Denmark"
+  },
+  {
+    "id": 126,
+    "level": "hard",
+    "question": "Which planet has the Great Red Spot?",
+    "answers": ["Jupiter", "Saturn", "Neptune", "Uranus"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Gas giant"
+  },
+  {
+    "id": 127,
+    "level": "hard",
+    "question": "Who formulated the laws of heredity?",
+    "answers": ["Charles Darwin", "Gregor Mendel", "Watson & Crick", "Robert Hooke"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Monk who worked with peas"
+  },
+  {
+    "id": 128,
+    "level": "hard",
+    "question": "Which country invented paper?",
+    "answers": ["Egypt", "China", "Greece", "India"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Ancient civilization"
+  },
+  {
+    "id": 129,
+    "level": "hard",
+    "question": "What is the capital of Argentina?",
+    "answers": ["Lima", "Buenos Aires", "Santiago", "Montevideo"],
+    "correctIndex": 1,
+    "money": 500000,
+    "hint": "Located along the Rio de la Plata"
+  },
+  {
+    "id": 130,
+    "level": "hard",
+    "question": "Which scientist discovered gravity?",
+    "answers": ["Galileo Galilei", "Isaac Newton", "Einstein", "Kepler"],
+    "correctIndex": 1,
+    "money": 1000000,
+    "hint": "Apple story"
+  },
+  {
+    "id": 131,
+    "level": "easy",
+    "question": "Which gas do humans exhale?",
+    "answers": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "CO₂"
+  },
+  {
+    "id": 132,
+    "level": "easy",
+    "question": "What is the capital of Spain?",
+    "answers": ["Madrid", "Barcelona", "Seville", "Valencia"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Central Spain"
+  },
+  {
+    "id": 133,
+    "level": "easy",
+    "question": "Which fruit is citrus?",
+    "answers": ["Apple", "Banana", "Orange", "Grapes"],
+    "correctIndex": 2,
+    "money": 300,
+    "hint": "High in vitamin C"
+  },
+  {
+    "id": 134,
+    "level": "easy",
+    "question": "Which instrument has six strings?",
+    "answers": ["Violin", "Guitar", "Harp", "Piano"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Used in rock music"
+  },
+  {
+    "id": 135,
+    "level": "easy",
+    "question": "Which star is at the center of the solar system?",
+    "answers": ["Sirius", "Polaris", "Sun", "Alpha Centauri"],
+    "correctIndex": 2,
+    "money": 1000,
+    "hint": "Provides light and heat"
+  },
+  {
+    "id": 136,
+    "level": "medium",
+    "question": "What is the capital of Canada?",
+    "answers": ["Toronto", "Ottawa", "Vancouver", "Montreal"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Located in Ontario"
+  },
+  {
+    "id": 137,
+    "level": "medium",
+    "question": "Which is the largest organ in the human body?",
+    "answers": ["Liver", "Skin", "Heart", "Brain"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Covers the entire body"
+  },
+  {
+    "id": 138,
+    "level": "medium",
+    "question": "What is the tallest building in the world (as of 2025)?",
+    "answers": ["Shanghai Tower", "Burj Khalifa", "Merdeka 118", "Tokyo Skytree"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Located in Dubai"
+  },
+  {
+    "id": 139,
+    "level": "medium",
+    "question": "Which is the longest bone in the human arm?",
+    "answers": ["Radius", "Ulna", "Humerus", "Clavicle"],
+    "correctIndex": 2,
+    "money": 16000,
+    "hint": "Upper arm bone"
+  },
+  {
+    "id": 140,
+    "level": "medium",
+    "question": "Which is the smallest ocean in the world?",
+    "answers": ["Indian", "Arctic", "Southern", "Atlantic"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "Near the North Pole"
+  },
+  {
+    "id": 141,
+    "level": "hard",
+    "question": "What is the capital of Egypt?",
+    "answers": ["Cairo", "Alexandria", "Giza", "Luxor"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Near the Nile"
+  },
+  {
+    "id": 142,
+    "level": "hard",
+    "question": "Which chemical element has the symbol 'Pb'?",
+    "answers": ["Platinum", "Lead", "Palladium", "Phosphorus"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Used in old pipes"
+  },
+  {
+    "id": 143,
+    "level": "hard",
+    "question": "What is the freezing point of water in Fahrenheit?",
+    "answers": ["0", "32", "100", "212"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Double digits"
+  },
+  {
+    "id": 144,
+    "level": "hard",
+    "question": "Which country has the most islands?",
+    "answers": ["Indonesia", "Sweden", "Philippines", "Norway"],
+    "correctIndex": 1,
+    "money": 500000,
+    "hint": "Over 200,000 islands"
+  },
+  {
+    "id": 145,
+    "level": "hard",
+    "question": "Who discovered penicillin?",
+    "answers": ["Alexander Fleming", "Louis Pasteur", "Robert Koch", "Edward Jenner"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "1928 discovery"
+  },
+  {
+    "id": 146,
+    "level": "easy",
+    "question": "Which sport is played at Wimbledon?",
+    "answers": ["Tennis", "Football", "Cricket", "Rugby"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Played on grass courts"
+  },
+  {
+    "id": 147,
+    "level": "easy",
+    "question": "Which part of a plant absorbs water?",
+    "answers": ["Leaves", "Roots", "Stem", "Flower"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Underground"
+  },
+  {
+    "id": 148,
+    "level": "easy",
+    "question": "Which sea creature has eight arms?",
+    "answers": ["Squid", "Octopus", "Crab", "Starfish"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Highly intelligent"
+  },
+  {
+    "id": 149,
+    "level": "easy",
+    "question": "Which animal produces wool?",
+    "answers": ["Goat", "Sheep", "Cow", "Rabbit"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Farm animal"
+  },
+  {
+    "id": 150,
+    "level": "easy",
+    "question": "Which organ do humans use to see?",
+    "answers": ["Ear", "Nose", "Eye", "Mouth"],
+    "correctIndex": 2,
+    "money": 1000,
+    "hint": "Pairs of them"
+  },
+  {
+    "id": 151,
+    "level": "medium",
+    "question": "Which planet is farthest from the Sun?",
+    "answers": ["Neptune", "Uranus", "Pluto", "Saturn"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Named after the Roman god of the sea"
+  },
+  {
+    "id": 152,
+    "level": "medium",
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "answers": ["China", "Japan", "Thailand", "South Korea"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Island nation in East Asia"
+  },
+  {
+    "id": 153,
+    "level": "medium",
+    "question": "What is the capital of Thailand?",
+    "answers": ["Bangkok", "Phuket", "Chiang Mai", "Pattaya"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "City with famous floating markets"
+  },
+  {
+    "id": 154,
+    "level": "medium",
+    "question": "Which planet has the most intense storms?",
+    "answers": ["Jupiter", "Saturn", "Neptune", "Mars"],
+    "correctIndex": 2,
+    "money": 16000,
+    "hint": "Strongest winds in the solar system"
+  },
+  {
+    "id": 155,
+    "level": "medium",
+    "question": "What is the chemical formula for table salt?",
+    "answers": ["NaCl", "KCl", "CaCl2", "Na2CO3"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Contains sodium and chlorine"
+  },
+  {
+    "id": 156,
+    "level": "hard",
+    "question": "Which is the oldest university in the world still operating?",
+    "answers": ["University of Oxford", "University of Bologna", "University of al-Qarawiyyin", "Sorbonne University"],
+    "correctIndex": 2,
+    "money": 64000,
+    "hint": "Located in Morocco"
+  },
+  {
+    "id": 157,
+    "level": "hard",
+    "question": "Who developed the periodic table?",
+    "answers": ["Dmitri Mendeleev", "Marie Curie", "John Dalton", "Niels Bohr"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "Russian chemist"
+  },
+  {
+    "id": 158,
+    "level": "hard",
+    "question": "Which country has the highest number of volcanoes?",
+    "answers": ["Japan", "Indonesia", "Philippines", "USA"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Located in the Ring of Fire"
+  },
+  {
+    "id": 159,
+    "level": "hard",
+    "question": "Which war ended with the Treaty of Versailles?",
+    "answers": ["World War I", "World War II", "Crimean War", "Franco-Prussian War"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "Ended in 1919"
+  },
+  {
+    "id": 160,
+    "level": "hard",
+    "question": "Which is the largest living species of lizard?",
+    "answers": ["Komodo Dragon", "Monitor Lizard", "Iguana", "Gila Monster"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Native to Indonesia"
+  },
+  {
+    "id": 161,
+    "level": "easy",
+    "question": "Which animal is known for having a pouch?",
+    "answers": ["Kangaroo", "Elephant", "Lion", "Bear"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Australian marsupial"
+  },
+  {
+    "id": 162,
+    "level": "easy",
+    "question": "What is the largest mammal on Earth?",
+    "answers": ["Elephant", "Blue Whale", "Giraffe", "Hippo"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Lives in oceans"
+  },
+  {
+    "id": 163,
+    "level": "easy",
+    "question": "Which shape has no corners?",
+    "answers": ["Circle", "Square", "Triangle", "Pentagon"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "Perfectly round"
+  },
+  {
+    "id": 164,
+    "level": "easy",
+    "question": "Which planet is known as Earth's twin?",
+    "answers": ["Mars", "Venus", "Mercury", "Neptune"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Similar size to Earth"
+  },
+  {
+    "id": 165,
+    "level": "easy",
+    "question": "What do you call a baby cat?",
+    "answers": ["Cub", "Kitten", "Puppy", "Calf"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Small and playful"
+  },
+  {
+    "id": 166,
+    "level": "medium",
+    "question": "Which ocean is on the east coast of the United States?",
+    "answers": ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean", "Arctic Ocean"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Separates USA from Europe"
+  },
+  {
+    "id": 167,
+    "level": "medium",
+    "question": "Which planet has the shortest day?",
+    "answers": ["Earth", "Jupiter", "Mars", "Mercury"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Rotates in under 10 hours"
+  },
+  {
+    "id": 168,
+    "level": "medium",
+    "question": "What is the capital of Russia?",
+    "answers": ["Moscow", "Saint Petersburg", "Kazan", "Novosibirsk"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Largest city in Russia"
+  },
+  {
+    "id": 169,
+    "level": "medium",
+    "question": "Which is the fastest aquatic animal?",
+    "answers": ["Sailfish", "Shark", "Dolphin", "Tuna"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Can swim up to 68 mph"
+  },
+  {
+    "id": 170,
+    "level": "medium",
+    "question": "Which organ in the human body produces insulin?",
+    "answers": ["Liver", "Pancreas", "Kidney", "Stomach"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "Helps regulate blood sugar"
+  },
+  {
+    "id": 171,
+    "level": "hard",
+    "question": "Which country is the largest exporter of tea?",
+    "answers": ["India", "China", "Sri Lanka", "Kenya"],
+    "correctIndex": 1,
+    "money": 64000,
+    "hint": "Also the most populous country"
+  },
+  {
+    "id": 172,
+    "level": "hard",
+    "question": "Which is the smallest bone in the human body?",
+    "answers": ["Stapes", "Incus", "Malleus", "Cochlea"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "Located in the ear"
+  },
+  {
+    "id": 173,
+    "level": "hard",
+    "question": "Which element has the highest melting point?",
+    "answers": ["Carbon", "Tungsten", "Osmium", "Platinum"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Used in light bulb filaments"
+  },
+  {
+    "id": 174,
+    "level": "hard",
+    "question": "In which country is the Great Barrier Reef located?",
+    "answers": ["Australia", "USA", "Philippines", "Fiji"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "Near Queensland"
+  },
+  {
+    "id": 175,
+    "level": "hard",
+    "question": "Which mathematician is known as the father of geometry?",
+    "answers": ["Archimedes", "Euclid", "Pythagoras", "Descartes"],
+    "correctIndex": 1,
+    "money": 1000000,
+    "hint": "Greek mathematician"
+  },
+  {
+    "id": 176,
+    "level": "easy",
+    "question": "What is the capital of France?",
+    "answers": ["Paris", "Lyon", "Marseille", "Nice"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "City of Light"
+  },
+  {
+    "id": 177,
+    "level": "easy",
+    "question": "Which month comes after October?",
+    "answers": ["November", "September", "December", "August"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Month before December"
+  },
+  {
+    "id": 178,
+    "level": "easy",
+    "question": "Which gas do humans need to breathe?",
+    "answers": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Helium"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "Symbol O₂"
+  },
+  {
+    "id": 179,
+    "level": "easy",
+    "question": "Which instrument is used to measure temperature?",
+    "answers": ["Barometer", "Thermometer", "Hygrometer", "Altimeter"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Used in weather forecasts"
+  },
+  {
+    "id": 180,
+    "level": "easy",
+    "question": "Which bird is known for mimicking sounds?",
+    "answers": ["Parrot", "Eagle", "Sparrow", "Crow"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Colorful feathers"
+  },
+  {
+    "id": 181,
+    "level": "medium",
+    "question": "Which is the largest continent?",
+    "answers": ["Africa", "Asia", "Europe", "North America"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Home to the most people"
+  },
+  {
+    "id": 182,
+    "level": "medium",
+    "question": "Which city is known as the Big Apple?",
+    "answers": ["Los Angeles", "Chicago", "New York City", "Miami"],
+    "correctIndex": 2,
+    "money": 4000,
+    "hint": "Located in the state of New York"
+  },
+  {
+    "id": 183,
+    "level": "medium",
+    "question": "What is the capital of Germany?",
+    "answers": ["Berlin", "Munich", "Frankfurt", "Hamburg"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "City with the Brandenburg Gate"
+  },
+  {
+    "id": 184,
+    "level": "medium",
+    "question": "Which blood type is the rarest in the world?",
+    "answers": ["AB-", "O-", "B-", "A+"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Negative and uncommon"
+  },
+  {
+    "id": 185,
+    "level": "medium",
+    "question": "What is the chemical symbol for silver?",
+    "answers": ["Ag", "Si", "Au", "Al"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "From the Latin word 'argentum'"
+  },
+  {
+    "id": 186,
+    "level": "hard",
+    "question": "Which African country has the most pyramids?",
+    "answers": ["Egypt", "Sudan", "Ethiopia", "Libya"],
+    "correctIndex": 1,
+    "money": 64000,
+    "hint": "More than Egypt"
+  },
+  {
+    "id": 187,
+    "level": "hard",
+    "question": "Which scientist discovered that the Earth revolves around the Sun?",
+    "answers": ["Galileo Galilei", "Nicolaus Copernicus", "Johannes Kepler", "Isaac Newton"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Polish astronomer"
+  },
+  {
+    "id": 188,
+    "level": "hard",
+    "question": "Which country produces the most gold?",
+    "answers": ["USA", "Australia", "China", "Russia"],
+    "correctIndex": 2,
+    "money": 250000,
+    "hint": "Also largest population"
+  },
+  {
+    "id": 189,
+    "level": "hard",
+    "question": "In which year did the Apollo 11 mission land on the Moon?",
+    "answers": ["1965", "1967", "1969", "1971"],
+    "correctIndex": 2,
+    "money": 500000,
+    "hint": "Neil Armstrong's famous step"
+  },
+  {
+    "id": 190,
+    "level": "hard",
+    "question": "Which city is the capital of South Africa?",
+    "answers": ["Pretoria", "Cape Town", "Bloemfontein", "All of the above"],
+    "correctIndex": 3,
+    "money": 1000000,
+    "hint": "Unique with three capitals"
+  },
+  {
+    "id": 191,
+    "level": "easy",
+    "question": "Which shape has five sides?",
+    "answers": ["Square", "Triangle", "Pentagon", "Hexagon"],
+    "correctIndex": 2,
+    "money": 100,
+    "hint": "Famous US building shape"
+  },
+  {
+    "id": 192,
+    "level": "easy",
+    "question": "Which is the fastest land animal?",
+    "answers": ["Cheetah", "Horse", "Lion", "Gazelle"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Can reach 100 km/h"
+  },
+  {
+    "id": 193,
+    "level": "easy",
+    "question": "Which part of the body is used for hearing?",
+    "answers": ["Eye", "Ear", "Nose", "Mouth"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Has eardrum"
+  },
+  {
+    "id": 194,
+    "level": "easy",
+    "question": "Which fruit is known as the king of fruits?",
+    "answers": ["Mango", "Durian", "Apple", "Pineapple"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Tropical fruit"
+  },
+  {
+    "id": 195,
+    "level": "easy",
+    "question": "What color are emeralds?",
+    "answers": ["Blue", "Green", "Red", "Yellow"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Same color as grass"
+  },
+  {
+    "id": 196,
+    "level": "medium",
+    "question": "Which country is home to the kangaroo?",
+    "answers": ["Australia", "New Zealand", "South Africa", "India"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Island continent"
+  },
+  {
+    "id": 197,
+    "level": "medium",
+    "question": "What is the capital of Canada?",
+    "answers": ["Ottawa", "Toronto", "Vancouver", "Montreal"],
+    "correctIndex": 0,
+    "money": 4000,
+    "hint": "Located in Ontario"
+  },
+  {
+    "id": 198,
+    "level": "medium",
+    "question": "Which ocean is the deepest?",
+    "answers": ["Pacific", "Atlantic", "Indian", "Southern"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Contains Mariana Trench"
+  },
+  {
+    "id": 199,
+    "level": "medium",
+    "question": "Which chemical element has the symbol 'K'?",
+    "answers": ["Krypton", "Potassium", "Kalium", "Ketium"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Essential for nerve function"
+  },
+  {
+    "id": 200,
+    "level": "medium",
+    "question": "Which continent has the most countries?",
+    "answers": ["Asia", "Africa", "Europe", "South America"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "Over 50 nations"
+  },
+  {
+    "id": 201,
+    "level": "easy",
+    "question": "Which animal is known for building dams?",
+    "answers": ["Beaver", "Otter", "Squirrel", "Raccoon"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Flat tail, strong teeth"
+  },
+  {
+    "id": 202,
+    "level": "easy",
+    "question": "Which continent is Brazil in?",
+    "answers": ["North America", "South America", "Europe", "Africa"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Same as Argentina"
+  },
+  {
+    "id": 203,
+    "level": "easy",
+    "question": "Which is the largest planet in our solar system?",
+    "answers": ["Saturn", "Jupiter", "Uranus", "Neptune"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Has a Great Red Spot"
+  },
+  {
+    "id": 204,
+    "level": "easy",
+    "question": "What is the main ingredient in bread?",
+    "answers": ["Flour", "Rice", "Corn", "Oats"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Made from wheat"
+  },
+  {
+    "id": 205,
+    "level": "easy",
+    "question": "Which planet is known as the Morning Star?",
+    "answers": ["Venus", "Mars", "Mercury", "Jupiter"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Also Earth's twin"
+  },
+  {
+    "id": 206,
+    "level": "medium",
+    "question": "Which river flows through Egypt?",
+    "answers": ["Nile", "Amazon", "Yangtze", "Danube"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Longest river in Africa"
+  },
+  {
+    "id": 207,
+    "level": "medium",
+    "question": "Which city is the capital of Italy?",
+    "answers": ["Venice", "Rome", "Milan", "Florence"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "City of the Colosseum"
+  },
+  {
+    "id": 208,
+    "level": "medium",
+    "question": "Which organ removes waste from the blood?",
+    "answers": ["Liver", "Kidneys", "Heart", "Lungs"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Pair of bean-shaped organs"
+  },
+  {
+    "id": 209,
+    "level": "medium",
+    "question": "Which country is known for the maple leaf symbol?",
+    "answers": ["USA", "Canada", "UK", "Australia"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "North American country"
+  },
+  {
+    "id": 210,
+    "level": "medium",
+    "question": "What is the capital of Egypt?",
+    "answers": ["Cairo", "Alexandria", "Luxor", "Giza"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Located on the Nile"
+  },
+  {
+    "id": 211,
+    "level": "hard",
+    "question": "Which scientist discovered radioactivity?",
+    "answers": ["Marie Curie", "Henri Becquerel", "Pierre Curie", "Rutherford"],
+    "correctIndex": 1,
+    "money": 64000,
+    "hint": "French physicist"
+  },
+  {
+    "id": 212,
+    "level": "hard",
+    "question": "Which is the largest desert on Earth?",
+    "answers": ["Sahara", "Arabian", "Antarctic", "Gobi"],
+    "correctIndex": 2,
+    "money": 125000,
+    "hint": "Frozen desert"
+  },
+  {
+    "id": 213,
+    "level": "hard",
+    "question": "Which ancient civilization built Machu Picchu?",
+    "answers": ["Aztec", "Inca", "Maya", "Olmec"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Located in Peru"
+  },
+  {
+    "id": 214,
+    "level": "hard",
+    "question": "Which chemical element has the symbol 'Hg'?",
+    "answers": ["Mercury", "Hydrogen", "Hafnium", "Holmium"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "Only metal liquid at room temperature"
+  },
+  {
+    "id": 215,
+    "level": "hard",
+    "question": "Which is the longest river in South America?",
+    "answers": ["Amazon", "Orinoco", "Paraná", "Magdalena"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Flows through Brazil"
+  },
+  {
+    "id": 216,
+    "level": "easy",
+    "question": "Which shape has six sides?",
+    "answers": ["Hexagon", "Pentagon", "Heptagon", "Octagon"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Honeycomb shape"
+  },
+  {
+    "id": 217,
+    "level": "easy",
+    "question": "What is 15 minus 7?",
+    "answers": ["9", "8", "7", "6"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Less than 9"
+  },
+  {
+    "id": 218,
+    "level": "easy",
+    "question": "Which fruit is known for being sour and yellow?",
+    "answers": ["Lemon", "Banana", "Orange", "Mango"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "Used in lemonade"
+  },
+  {
+    "id": 219,
+    "level": "easy",
+    "question": "Which body part helps you smell?",
+    "answers": ["Eyes", "Ears", "Nose", "Mouth"],
+    "correctIndex": 2,
+    "money": 500,
+    "hint": "Located in the middle of the face"
+  },
+  {
+    "id": 220,
+    "level": "easy",
+    "question": "Which animal is known as man's best friend?",
+    "answers": ["Cat", "Dog", "Horse", "Parrot"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Barks"
+  },
+  {
+    "id": 221,
+    "level": "medium",
+    "question": "Which is the largest moon of Jupiter?",
+    "answers": ["Europa", "Ganymede", "Io", "Callisto"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Larger than Mercury"
+  },
+  {
+    "id": 222,
+    "level": "medium",
+    "question": "Which country is the origin of the Olympic Games?",
+    "answers": ["Italy", "Greece", "France", "USA"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Ancient civilization"
+  },
+  {
+    "id": 223,
+    "level": "medium",
+    "question": "What is the tallest animal in the world?",
+    "answers": ["Elephant", "Giraffe", "Camel", "Horse"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Long neck"
+  },
+  {
+    "id": 224,
+    "level": "medium",
+    "question": "Which planet has a tilt of 98 degrees?",
+    "answers": ["Venus", "Uranus", "Neptune", "Saturn"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Rotates on its side"
+  },
+  {
+    "id": 225,
+    "level": "medium",
+    "question": "Which element has the symbol 'O'?",
+    "answers": ["Osmium", "Oxygen", "Oxide", "Opal"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "Essential for breathing"
+  },
+  {
+    "id": 226,
+    "level": "hard",
+    "question": "Which scientist discovered the electron?",
+    "answers": ["Thomson", "Rutherford", "Bohr", "Einstein"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "J.J. ___"
+  },
+  {
+    "id": 227,
+    "level": "hard",
+    "question": "Which country is the largest producer of oil?",
+    "answers": ["USA", "Saudi Arabia", "Russia", "Canada"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Middle Eastern country"
+  },
+  {
+    "id": 228,
+    "level": "hard",
+    "question": "Which war was fought between the North and South regions in the USA?",
+    "answers": ["Civil War", "World War I", "Revolutionary War", "Vietnam War"],
+    "correctIndex": 0,
+    "money": 250000,
+    "hint": "1861-1865"
+  },
+  {
+    "id": 229,
+    "level": "hard",
+    "question": "Which is the largest coral reef system in the world?",
+    "answers": ["Belize Barrier Reef", "Red Sea Reef", "Great Barrier Reef", "Florida Reef"],
+    "correctIndex": 2,
+    "money": 500000,
+    "hint": "In Australia"
+  },
+  {
+    "id": 230,
+    "level": "hard",
+    "question": "Which scientist developed the vaccine for rabies?",
+    "answers": ["Louis Pasteur", "Edward Jenner", "Robert Koch", "Jonas Salk"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "French microbiologist"
+  },
+  {
+    "id": 231,
+    "level": "easy",
+    "question": "Which bird is the largest in the world?",
+    "answers": ["Ostrich", "Eagle", "Penguin", "Albatross"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Cannot fly but runs fast"
+  },
+  {
+    "id": 232,
+    "level": "easy",
+    "question": "What is the main gas we breathe in?",
+    "answers": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Helium"],
+    "correctIndex": 2,
+    "money": 200,
+    "hint": "Makes up about 78% of air"
+  },
+  {
+    "id": 233,
+    "level": "easy",
+    "question": "Which month has 31 days and is the last of the year?",
+    "answers": ["December", "November", "October", "January"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "Contains Christmas"
+  },
+  {
+    "id": 234,
+    "level": "easy",
+    "question": "What is the main ingredient in sushi?",
+    "answers": ["Bread", "Rice", "Pasta", "Corn"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Sticky and white"
+  },
+  {
+    "id": 235,
+    "level": "easy",
+    "question": "Which fruit is tropical and has spiky skin?",
+    "answers": ["Apple", "Pineapple", "Banana", "Mango"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Yellow inside, sweet and tangy"
+  },
+  {
+    "id": 236,
+    "level": "medium",
+    "question": "Which is the smallest planet in the solar system?",
+    "answers": ["Mars", "Mercury", "Venus", "Pluto"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Closest to the Sun"
+  },
+  {
+    "id": 237,
+    "level": "medium",
+    "question": "Which country is famous for the Eiffel Tower?",
+    "answers": ["Italy", "France", "Germany", "Spain"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Capital city is Paris"
+  },
+  {
+    "id": 238,
+    "level": "medium",
+    "question": "What is the capital of Malaysia?",
+    "answers": ["Jakarta", "Kuala Lumpur", "Bangkok", "Manila"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Twin Petronas Towers"
+  },
+  {
+    "id": 239,
+    "level": "medium",
+    "question": "Which ocean is the warmest?",
+    "answers": ["Indian Ocean", "Pacific Ocean", "Atlantic Ocean", "Southern Ocean"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Between Africa, Asia, and Australia"
+  },
+  {
+    "id": 240,
+    "level": "medium",
+    "question": "What is the chemical symbol for gold?",
+    "answers": ["Au", "Ag", "Pt", "Gd"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "From Latin 'aurum'"
+  },
+  {
+    "id": 241,
+    "level": "hard",
+    "question": "Which scientist discovered penicillin?",
+    "answers": ["Alexander Fleming", "Louis Pasteur", "Robert Koch", "Edward Jenner"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Discovery in 1928"
+  },
+  {
+    "id": 242,
+    "level": "hard",
+    "question": "Which is the highest mountain in Africa?",
+    "answers": ["Mount Kenya", "Mount Kilimanjaro", "Mount Stanley", "Ras Dashen"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Located in Tanzania"
+  },
+  {
+    "id": 243,
+    "level": "hard",
+    "question": "In which year did the Titanic sink?",
+    "answers": ["1905", "1912", "1915", "1920"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Early 20th century tragedy"
+  },
+  {
+    "id": 244,
+    "level": "hard",
+    "question": "Which country is the largest in the world by area?",
+    "answers": ["Canada", "Russia", "China", "USA"],
+    "correctIndex": 1,
+    "money": 500000,
+    "hint": "Spans Europe and Asia"
+  },
+  {
+    "id": 245,
+    "level": "hard",
+    "question": "Which is the rarest naturally occurring element on Earth?",
+    "answers": ["Astatine", "Francium", "Rhodium", "Iridium"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Halogen with atomic number 85"
+  },
+  {
+    "id": 246,
+    "level": "easy",
+    "question": "Which color is a mix of red and yellow?",
+    "answers": ["Orange", "Green", "Purple", "Brown"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Fruit name"
+  },
+  {
+    "id": 247,
+    "level": "easy",
+    "question": "Which animal produces milk for its young?",
+    "answers": ["Bird", "Reptile", "Mammal", "Fish"],
+    "correctIndex": 2,
+    "money": 200,
+    "hint": "Humans are one"
+  },
+  {
+    "id": 248,
+    "level": "easy",
+    "question": "Which country is famous for pizza and pasta?",
+    "answers": ["France", "Italy", "Spain", "Greece"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Capital is Rome"
+  },
+  {
+    "id": 249,
+    "level": "easy",
+    "question": "Which star is closest to Earth?",
+    "answers": ["Sirius", "Sun", "Alpha Centauri", "Betelgeuse"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Center of the solar system"
+  },
+  {
+    "id": 250,
+    "level": "easy",
+    "question": "What is the capital of Japan?",
+    "answers": ["Kyoto", "Tokyo", "Osaka", "Hiroshima"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Largest city in the country"
+  },
+  {
+    "id": 251,
+    "level": "medium",
+    "question": "Which country is known for the Taj Mahal?",
+    "answers": ["Pakistan", "India", "Bangladesh", "Nepal"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Located in Agra"
+  },
+  {
+    "id": 252,
+    "level": "medium",
+    "question": "Which is the largest internal organ of the human body?",
+    "answers": ["Liver", "Lungs", "Heart", "Kidneys"],
+    "correctIndex": 0,
+    "money": 4000,
+    "hint": "Helps filter toxins"
+  },
+  {
+    "id": 253,
+    "level": "medium",
+    "question": "What is the currency of the European Union?",
+    "answers": ["Dollar", "Euro", "Pound", "Franc"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Symbol €"
+  },
+  {
+    "id": 254,
+    "level": "medium",
+    "question": "Which gas do plants release during photosynthesis?",
+    "answers": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Methane"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Essential for humans"
+  },
+  {
+    "id": 255,
+    "level": "medium",
+    "question": "Which sea separates the Arabian Peninsula from Africa?",
+    "answers": ["Red Sea", "Black Sea", "Mediterranean Sea", "Arabian Sea"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Connected to the Suez Canal"
+  },
+  {
+    "id": 256,
+    "level": "hard",
+    "question": "Which physicist discovered the law of gravity?",
+    "answers": ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Niels Bohr"],
+    "correctIndex": 1,
+    "money": 64000,
+    "hint": "Apple story"
+  },
+  {
+    "id": 257,
+    "level": "hard",
+    "question": "Which is the smallest country in Asia?",
+    "answers": ["Maldives", "Bahrain", "Singapore", "Brunei"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "Island nation in the Indian Ocean"
+  },
+  {
+    "id": 258,
+    "level": "hard",
+    "question": "Which blood type is known as the universal plasma donor?",
+    "answers": ["AB", "O", "A", "B"],
+    "correctIndex": 0,
+    "money": 250000,
+    "hint": "Universal plasma but not blood donor"
+  },
+  {
+    "id": 259,
+    "level": "hard",
+    "question": "Which scientist is known as the father of modern chemistry?",
+    "answers": ["Antoine Lavoisier", "Robert Boyle", "Dmitri Mendeleev", "John Dalton"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "French chemist"
+  },
+  {
+    "id": 260,
+    "level": "hard",
+    "question": "Which city is known as the Eternal City?",
+    "answers": ["Athens", "Jerusalem", "Rome", "Istanbul"],
+    "correctIndex": 2,
+    "money": 1000000,
+    "hint": "Capital of Italy"
+  },
+  {
+    "id": 261,
+    "level": "easy",
+    "question": "Which shape has four equal sides and four right angles?",
+    "answers": ["Square", "Rectangle", "Parallelogram", "Trapezium"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "All sides equal"
+  },
+  {
+    "id": 262,
+    "level": "easy",
+    "question": "Which fruit is green on the outside and red inside?",
+    "answers": ["Apple", "Watermelon", "Grapes", "Strawberry"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Has black seeds"
+  },
+  {
+    "id": 263,
+    "level": "easy",
+    "question": "What is 20 divided by 4?",
+    "answers": ["4", "5", "6", "8"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Less than 6"
+  },
+  {
+    "id": 264,
+    "level": "easy",
+    "question": "Which insect produces silk?",
+    "answers": ["Silkworm", "Bee", "Ant", "Butterfly"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Used in fabric making"
+  },
+  {
+    "id": 265,
+    "level": "easy",
+    "question": "What do you call a group of lions?",
+    "answers": ["Pack", "Pride", "Flock", "Herd"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Royal name"
+  },
+  {
+    "id": 266,
+    "level": "medium",
+    "question": "Which element has the atomic number 79?",
+    "answers": ["Gold", "Silver", "Platinum", "Copper"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Precious yellow metal"
+  },
+  {
+    "id": 267,
+    "level": "medium",
+    "question": "What is the largest ocean on Earth?",
+    "answers": ["Atlantic", "Indian", "Pacific", "Arctic"],
+    "correctIndex": 2,
+    "money": 4000,
+    "hint": "Covers over 30% of Earth's surface"
+  },
+  {
+    "id": 268,
+    "level": "medium",
+    "question": "Which is the main language spoken in Egypt?",
+    "answers": ["English", "Arabic", "French", "Hebrew"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Also official in many Middle Eastern countries"
+  },
+  {
+    "id": 269,
+    "level": "medium",
+    "question": "Which organ pumps blood in the human body?",
+    "answers": ["Liver", "Heart", "Lungs", "Kidneys"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Beats continuously"
+  },
+  {
+    "id": 270,
+    "level": "medium",
+    "question": "Which city hosted the 2016 Summer Olympics?",
+    "answers": ["Beijing", "London", "Rio de Janeiro", "Tokyo"],
+    "correctIndex": 2,
+    "money": 32000,
+    "hint": "Brazilian city"
+  },
+  {
+    "id": 271,
+    "level": "hard",
+    "question": "Which is the largest moon in the Solar System?",
+    "answers": ["Titan", "Ganymede", "Europa", "Callisto"],
+    "correctIndex": 1,
+    "money": 64000,
+    "hint": "Orbits Jupiter"
+  },
+  {
+    "id": 272,
+    "level": "hard",
+    "question": "Which scientist discovered X-rays?",
+    "answers": ["Röntgen", "Curie", "Tesla", "Einstein"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "German physicist"
+  },
+  {
+    "id": 273,
+    "level": "hard",
+    "question": "Which war was fought from 1939 to 1945?",
+    "answers": ["World War I", "World War II", "Cold War", "Vietnam War"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Ended with Japan's surrender"
+  },
+  {
+    "id": 274,
+    "level": "hard",
+    "question": "Which planet has the most moons?",
+    "answers": ["Jupiter", "Saturn", "Uranus", "Neptune"],
+    "correctIndex": 1,
+    "money": 500000,
+    "hint": "Gas giant with rings"
+  },
+  {
+    "id": 275,
+    "level": "hard",
+    "question": "Which ancient Greek is called the father of medicine?",
+    "answers": ["Hippocrates", "Aristotle", "Plato", "Socrates"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Hippocratic oath"
+  },
+  {
+    "id": 276,
+    "level": "easy",
+    "question": "Which is the tallest animal?",
+    "answers": ["Elephant", "Giraffe", "Horse", "Camel"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Has a long neck"
+  },
+  {
+    "id": 277,
+    "level": "easy",
+    "question": "Which planet is closest to the Sun?",
+    "answers": ["Mercury", "Venus", "Earth", "Mars"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Smallest planet"
+  },
+  {
+    "id": 278,
+    "level": "easy",
+    "question": "Which is the fastest bird?",
+    "answers": ["Eagle", "Peregrine Falcon", "Hawk", "Ostrich"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Can dive over 300 km/h"
+  },
+  {
+    "id": 279,
+    "level": "easy",
+    "question": "Which month has 28 days?",
+    "answers": ["February", "All of them", "January", "March"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Trick question"
+  },
+  {
+    "id": 280,
+    "level": "easy",
+    "question": "Which shape has eight sides?",
+    "answers": ["Hexagon", "Heptagon", "Octagon", "Nonagon"],
+    "correctIndex": 2,
+    "money": 1000,
+    "hint": "Stop sign shape"
+  },
+  {
+    "id": 281,
+    "level": "medium",
+    "question": "Which city is the capital of South Korea?",
+    "answers": ["Seoul", "Busan", "Incheon", "Daegu"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Largest city in the country"
+  },
+  {
+    "id": 282,
+    "level": "medium",
+    "question": "Which country is the largest in Africa?",
+    "answers": ["Egypt", "Algeria", "Sudan", "Nigeria"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Located in North Africa"
+  },
+  {
+    "id": 283,
+    "level": "medium",
+    "question": "What is the capital of Greece?",
+    "answers": ["Athens", "Thessaloniki", "Patras", "Rhodes"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Home to the Acropolis"
+  },
+  {
+    "id": 284,
+    "level": "medium",
+    "question": "Which is the largest island in the Mediterranean Sea?",
+    "answers": ["Sardinia", "Sicily", "Cyprus", "Crete"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Part of Italy"
+  },
+  {
+    "id": 285,
+    "level": "medium",
+    "question": "Which ocean borders the east coast of Africa?",
+    "answers": ["Atlantic", "Indian", "Pacific", "Southern"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "Between Africa, Asia, and Australia"
+  },
+  {
+    "id": 286,
+    "level": "hard",
+    "question": "Which is the smallest ocean?",
+    "answers": ["Indian", "Arctic", "Southern", "Atlantic"],
+    "correctIndex": 1,
+    "money": 64000,
+    "hint": "Near the North Pole"
+  },
+  {
+    "id": 287,
+    "level": "hard",
+    "question": "Which scientist discovered the structure of DNA?",
+    "answers": ["Watson & Crick", "Mendel", "Franklin", "Darwin"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "Double helix"
+  },
+  {
+    "id": 288,
+    "level": "hard",
+    "question": "Which is the largest freshwater lake by volume?",
+    "answers": ["Lake Baikal", "Lake Superior", "Lake Victoria", "Lake Tanganyika"],
+    "correctIndex": 0,
+    "money": 250000,
+    "hint": "Located in Russia"
+  },
+  {
+    "id": 289,
+    "level": "hard",
+    "question": "Which element has the atomic number 6?",
+    "answers": ["Carbon", "Oxygen", "Nitrogen", "Helium"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "Basis of organic life"
+  },
+  {
+    "id": 290,
+    "level": "hard",
+    "question": "Which is the longest river in Europe?",
+    "answers": ["Danube", "Volga", "Rhine", "Elbe"],
+    "correctIndex": 1,
+    "money": 1000000,
+    "hint": "Flows through Russia"
+  },
+  {
+    "id": 291,
+    "level": "easy",
+    "question": "Which fruit is known as a symbol of love?",
+    "answers": ["Strawberry", "Apple", "Cherry", "Pomegranate"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Red heart shape"
+  },
+  {
+    "id": 292,
+    "level": "easy",
+    "question": "Which animal is the largest land mammal?",
+    "answers": ["Elephant", "Giraffe", "Hippo", "Rhino"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Has a trunk"
+  },
+  {
+    "id": 293,
+    "level": "easy",
+    "question": "Which shape has three sides?",
+    "answers": ["Square", "Triangle", "Pentagon", "Hexagon"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Basic geometry shape"
+  },
+  {
+    "id": 294,
+    "level": "easy",
+    "question": "What is the freezing point of water in Celsius?",
+    "answers": ["0", "100", "50", "32"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Below this it turns to ice"
+  },
+  {
+    "id": 295,
+    "level": "easy",
+    "question": "Which planet is called the Red Planet?",
+    "answers": ["Mars", "Jupiter", "Venus", "Saturn"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Fourth from the Sun"
+  },
+  {
+    "id": 296,
+    "level": "medium",
+    "question": "Which is the largest desert in Africa?",
+    "answers": ["Sahara", "Kalahari", "Namib", "Libyan"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Covers most of North Africa"
+  },
+  {
+    "id": 297,
+    "level": "medium",
+    "question": "Which is the tallest mountain in North America?",
+    "answers": ["Denali", "Mount Logan", "Mount Elbert", "Mount Rainier"],
+    "correctIndex": 0,
+    "money": 4000,
+    "hint": "Located in Alaska"
+  },
+  {
+    "id": 298,
+    "level": "medium",
+    "question": "Which organ in the human body filters blood?",
+    "answers": ["Liver", "Kidneys", "Heart", "Spleen"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Pair of organs"
+  },
+  {
+    "id": 299,
+    "level": "medium",
+    "question": "Which continent is the driest?",
+    "answers": ["Africa", "Antarctica", "Australia", "Asia"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Also the coldest"
+  },
+  {
+    "id": 300,
+    "level": "medium",
+    "question": "Which is the capital city of Spain?",
+    "answers": ["Barcelona", "Madrid", "Seville", "Valencia"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "Located in central Spain"
+  },
+  {
+    "id": 301,
+    "level": "easy",
+    "question": "In which sport is the term 'love' used?",
+    "answers": ["Tennis", "Football", "Cricket", "Hockey"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Means zero score"
+  },
+  {
+    "id": 302,
+    "level": "easy",
+    "question": "Which country is famous for maple syrup?",
+    "answers": ["USA", "Canada", "Australia", "Germany"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Has a red maple leaf on its flag"
+  },
+  {
+    "id": 303,
+    "level": "easy",
+    "question": "Which animal is known for changing its color?",
+    "answers": ["Chameleon", "Frog", "Butterfly", "Snake"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "Reptile with adaptive skin"
+  },
+  {
+    "id": 304,
+    "level": "easy",
+    "question": "What is the main ingredient in guacamole?",
+    "answers": ["Tomato", "Avocado", "Lettuce", "Cucumber"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Green fruit with a large seed"
+  },
+  {
+    "id": 305,
+    "level": "easy",
+    "question": "Which social media platform uses a bird as its logo?",
+    "answers": ["Facebook", "Twitter", "Instagram", "TikTok"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Famous for tweets"
+  },
+  {
+    "id": 306,
+    "level": "medium",
+    "question": "In which year was the first iPhone released?",
+    "answers": ["2005", "2007", "2008", "2010"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Steve Jobs announced it at Macworld"
+  },
+  {
+    "id": 307,
+    "level": "medium",
+    "question": "Which city hosted the 2022 FIFA World Cup final?",
+    "answers": ["Doha", "Moscow", "Rio de Janeiro", "London"],
+    "correctIndex": 0,
+    "money": 4000,
+    "hint": "Capital of Qatar"
+  },
+  {
+    "id": 308,
+    "level": "medium",
+    "question": "What is the largest art museum in the world?",
+    "answers": ["The Louvre", "Metropolitan Museum of Art", "British Museum", "Hermitage Museum"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Located in Paris"
+  },
+  {
+    "id": 309,
+    "level": "medium",
+    "question": "Which company developed the video game 'Minecraft'?",
+    "answers": ["EA Games", "Mojang", "Epic Games", "Ubisoft"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Acquired by Microsoft"
+  },
+  {
+    "id": 310,
+    "level": "medium",
+    "question": "Which film won the Academy Award for Best Picture in 1994?",
+    "answers": ["Pulp Fiction", "Forrest Gump", "The Shawshank Redemption", "Braveheart"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "Life is like a box of chocolates"
+  },
+  {
+    "id": 311,
+    "level": "hard",
+    "question": "Which element is named after the creator of the periodic table?",
+    "answers": ["Curium", "Mendelevium", "Einsteinium", "Fermium"],
+    "correctIndex": 1,
+    "money": 64000,
+    "hint": "Synthetic element, symbol Md"
+  },
+  {
+    "id": 312,
+    "level": "hard",
+    "question": "Who composed the opera 'The Magic Flute'?",
+    "answers": ["Beethoven", "Mozart", "Bach", "Chopin"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Austrian classical composer"
+  },
+  {
+    "id": 313,
+    "level": "hard",
+    "question": "What is the oldest known written story?",
+    "answers": ["The Iliad", "The Epic of Gilgamesh", "Beowulf", "Mahabharata"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Ancient Mesopotamian epic"
+  },
+  {
+    "id": 314,
+    "level": "hard",
+    "question": "Which scientist is known for formulating the laws of planetary motion?",
+    "answers": ["Kepler", "Newton", "Galileo", "Copernicus"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "German astronomer"
+  },
+  {
+    "id": 315,
+    "level": "hard",
+    "question": "Which country was the first to grant women the right to vote?",
+    "answers": ["New Zealand", "Finland", "USA", "Australia"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Happened in 1893"
+  },
+  {
+    "id": 316,
+    "level": "easy",
+    "question": "Which instrument has black and white keys?",
+    "answers": ["Violin", "Piano", "Guitar", "Flute"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Played with fingers"
+  },
+  {
+    "id": 317,
+    "level": "easy",
+    "question": "Which country is home to kangaroos?",
+    "answers": ["New Zealand", "Australia", "South Africa", "Brazil"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Island continent"
+  },
+  {
+    "id": 318,
+    "level": "easy",
+    "question": "Which planet is known as the Blue Planet?",
+    "answers": ["Neptune", "Earth", "Uranus", "Saturn"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Covered mostly in water"
+  },
+  {
+    "id": 319,
+    "level": "easy",
+    "question": "What is the currency of Japan?",
+    "answers": ["Yen", "Won", "Yuan", "Dollar"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Symbol ¥"
+  },
+  {
+    "id": 320,
+    "level": "easy",
+    "question": "Which organ do humans use to hear?",
+    "answers": ["Ear", "Nose", "Eye", "Mouth"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Contains the eardrum"
+  },
+  {
+    "id": 321,
+    "level": "medium",
+    "question": "Which chess piece can only move diagonally?",
+    "answers": ["Rook", "Bishop", "Queen", "Knight"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "One per color on each side"
+  },
+  {
+    "id": 322,
+    "level": "medium",
+    "question": "What is the capital of Argentina?",
+    "answers": ["Lima", "Buenos Aires", "Santiago", "Montevideo"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Located by the Rio de la Plata"
+  },
+  {
+    "id": 323,
+    "level": "medium",
+    "question": "Which year did World War II begin?",
+    "answers": ["1937", "1939", "1940", "1941"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Germany invaded Poland"
+  },
+  {
+    "id": 324,
+    "level": "medium",
+    "question": "Which planet has a day longer than its year?",
+    "answers": ["Venus", "Mercury", "Mars", "Jupiter"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Hottest planet in the Solar System"
+  },
+  {
+    "id": 325,
+    "level": "medium",
+    "question": "Which is the most spoken language in the world by native speakers?",
+    "answers": ["English", "Mandarin Chinese", "Spanish", "Hindi"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "Over 900 million native speakers"
+  },
+  {
+    "id": 326,
+    "level": "hard",
+    "question": "Who wrote 'Pride and Prejudice'?",
+    "answers": ["Charlotte Brontë", "Jane Austen", "Emily Brontë", "Mary Shelley"],
+    "correctIndex": 1,
+    "money": 64000,
+    "hint": "English novelist of the early 19th century"
+  },
+  {
+    "id": 327,
+    "level": "hard",
+    "question": "Which ancient city was buried under volcanic ash from Mount Vesuvius?",
+    "answers": ["Pompeii", "Athens", "Carthage", "Troy"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "Disaster happened in AD 79"
+  },
+  {
+    "id": 328,
+    "level": "hard",
+    "question": "Which is the fastest land animal over long distances?",
+    "answers": ["Horse", "Cheetah", "Pronghorn Antelope", "Greyhound"],
+    "correctIndex": 2,
+    "money": 250000,
+    "hint": "Second only to cheetah in top speed but can sustain longer"
+  },
+  {
+    "id": 329,
+    "level": "hard",
+    "question": "Who was the first emperor of Rome?",
+    "answers": ["Julius Caesar", "Augustus", "Nero", "Tiberius"],
+    "correctIndex": 1,
+    "money": 500000,
+    "hint": "Originally named Octavian"
+  },
+  {
+    "id": 330,
+    "level": "hard",
+    "question": "Which is the largest moon of Saturn?",
+    "answers": ["Titan", "Rhea", "Iapetus", "Dione"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Larger than Mercury"
+  },
+  {
+    "id": 331,
+    "level": "easy",
+    "question": "Which board game uses properties like Boardwalk and Park Place?",
+    "answers": ["Monopoly", "Chess", "Scrabble", "Risk"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Uses fake money"
+  },
+  {
+    "id": 332,
+    "level": "easy",
+    "question": "Which beverage is made from fermented grapes?",
+    "answers": ["Beer", "Wine", "Whiskey", "Vodka"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Often red or white"
+  },
+  {
+    "id": 333,
+    "level": "easy",
+    "question": "Which is the capital city of Canada?",
+    "answers": ["Toronto", "Ottawa", "Vancouver", "Montreal"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Located in Ontario"
+  },
+  {
+    "id": 334,
+    "level": "easy",
+    "question": "Which planet is famous for its rings?",
+    "answers": ["Saturn", "Uranus", "Jupiter", "Neptune"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Gas giant"
+  },
+  {
+    "id": 335,
+    "level": "easy",
+    "question": "What is the largest species of shark?",
+    "answers": ["Great White Shark", "Whale Shark", "Tiger Shark", "Hammerhead Shark"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Gentle giant"
+  },
+  {
+    "id": 336,
+    "level": "medium",
+    "question": "Who painted the Mona Lisa?",
+    "answers": ["Van Gogh", "Leonardo da Vinci", "Michelangelo", "Raphael"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Also known for The Last Supper"
+  },
+  {
+    "id": 337,
+    "level": "medium",
+    "question": "Which is the longest bone in the human body?",
+    "answers": ["Humerus", "Femur", "Tibia", "Fibula"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Located in the thigh"
+  },
+  {
+    "id": 338,
+    "level": "medium",
+    "question": "Which country hosted the 2018 FIFA World Cup?",
+    "answers": ["Russia", "Brazil", "Germany", "France"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Largest country in the world"
+  },
+  {
+    "id": 339,
+    "level": "medium",
+    "question": "Which river runs through London?",
+    "answers": ["Seine", "Thames", "Danube", "Rhine"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Flows into the North Sea"
+  },
+  {
+    "id": 340,
+    "level": "medium",
+    "question": "Which continent is known as the Dark Continent?",
+    "answers": ["Asia", "Africa", "Australia", "Europe"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "Nickname from 19th century explorers"
+  },
+  {
+    "id": 341,
+    "level": "hard",
+    "question": "Which scientist discovered the electron?",
+    "answers": ["J.J. Thomson", "Rutherford", "Bohr", "Planck"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "1897 discovery"
+  },
+  {
+    "id": 342,
+    "level": "hard",
+    "question": "Which country built the first high-speed train?",
+    "answers": ["France", "Japan", "Germany", "China"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Shinkansen"
+  },
+  {
+    "id": 343,
+    "level": "hard",
+    "question": "Who is the author of '1984'?",
+    "answers": ["Aldous Huxley", "George Orwell", "Ray Bradbury", "Jules Verne"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Also wrote Animal Farm"
+  },
+  {
+    "id": 344,
+    "level": "hard",
+    "question": "Which metal has the highest melting point?",
+    "answers": ["Iron", "Tungsten", "Titanium", "Platinum"],
+    "correctIndex": 1,
+    "money": 500000,
+    "hint": "Used in light bulb filaments"
+  },
+  {
+    "id": 345,
+    "level": "hard",
+    "question": "Which civilization built the city of Tenochtitlán?",
+    "answers": ["Aztec", "Maya", "Inca", "Olmec"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Now Mexico City"
+  },
+  {
+    "id": 346,
+    "level": "easy",
+    "question": "Which fruit is yellow and curved?",
+    "answers": ["Banana", "Lemon", "Mango", "Papaya"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Often found in bunches"
+  },
+  {
+    "id": 347,
+    "level": "easy",
+    "question": "Which animal is known as the King of the Jungle?",
+    "answers": ["Tiger", "Lion", "Elephant", "Leopard"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Has a mane"
+  },
+  {
+    "id": 348,
+    "level": "easy",
+    "question": "Which is the capital city of France?",
+    "answers": ["Rome", "Paris", "Madrid", "Berlin"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "City of Light"
+  },
+  {
+    "id": 349,
+    "level": "easy",
+    "question": "Which is the fastest sea animal?",
+    "answers": ["Sailfish", "Shark", "Tuna", "Dolphin"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Pointed billfish"
+  },
+  {
+    "id": 350,
+    "level": "easy",
+    "question": "Which is the main ingredient in hummus?",
+    "answers": ["Chickpeas", "Lentils", "Beans", "Peas"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Blended with tahini"
+  },
+  {
+    "id": 351,
+    "level": "medium",
+    "question": "Which artist painted 'The Starry Night'?",
+    "answers": ["Pablo Picasso", "Vincent van Gogh", "Claude Monet", "Salvador Dalí"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Dutch post-impressionist"
+  },
+  {
+    "id": 352,
+    "level": "medium",
+    "question": "Which city hosted the first modern Olympic Games in 1896?",
+    "answers": ["Paris", "Athens", "London", "Rome"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Capital of Greece"
+  },
+  {
+    "id": 353,
+    "level": "medium",
+    "question": "Which company created the PlayStation console?",
+    "answers": ["Nintendo", "Sony", "Microsoft", "Sega"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Japanese tech giant"
+  },
+  {
+    "id": 354,
+    "level": "medium",
+    "question": "What is the capital of Kenya?",
+    "answers": ["Mombasa", "Nairobi", "Kampala", "Dar es Salaam"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Largest city in Kenya"
+  },
+  {
+    "id": 355,
+    "level": "medium",
+    "question": "Which metal is liquid at room temperature?",
+    "answers": ["Mercury", "Gallium", "Sodium", "Aluminum"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Symbol Hg"
+  },
+  {
+    "id": 356,
+    "level": "hard",
+    "question": "Who wrote the novel 'Moby-Dick'?",
+    "answers": ["Herman Melville", "Mark Twain", "Charles Dickens", "Jack London"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Published in 1851"
+  },
+  {
+    "id": 357,
+    "level": "hard",
+    "question": "Which is the only continent without a native species of ants?",
+    "answers": ["Antarctica", "Europe", "Asia", "Australia"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "Also has no trees"
+  },
+  {
+    "id": 358,
+    "level": "hard",
+    "question": "Who is credited with inventing the World Wide Web?",
+    "answers": ["Bill Gates", "Tim Berners-Lee", "Steve Jobs", "Linus Torvalds"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "British computer scientist"
+  },
+  {
+    "id": 359,
+    "level": "hard",
+    "question": "What is the longest-running Broadway show?",
+    "answers": ["Cats", "The Phantom of the Opera", "Les Misérables", "Chicago"],
+    "correctIndex": 1,
+    "money": 500000,
+    "hint": "Opened in 1988"
+  },
+  {
+    "id": 360,
+    "level": "hard",
+    "question": "Which scientist discovered penicillin?",
+    "answers": ["Alexander Fleming", "Louis Pasteur", "Robert Koch", "Joseph Lister"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Scottish bacteriologist"
+  },
+  {
+    "id": 361,
+    "level": "easy",
+    "question": "Which fruit is known as the king of fruits in Southeast Asia?",
+    "answers": ["Mango", "Durian", "Pineapple", "Banana"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Has a strong smell"
+  },
+  {
+    "id": 362,
+    "level": "easy",
+    "question": "What color is chlorophyll?",
+    "answers": ["Red", "Green", "Blue", "Yellow"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Responsible for photosynthesis"
+  },
+  {
+    "id": 363,
+    "level": "easy",
+    "question": "Which planet is farthest from the Sun?",
+    "answers": ["Uranus", "Neptune", "Saturn", "Jupiter"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Named after the Roman god of the sea"
+  },
+  {
+    "id": 364,
+    "level": "easy",
+    "question": "Which country is famous for chocolate and watches?",
+    "answers": ["Belgium", "Switzerland", "France", "Germany"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Alpine country"
+  },
+  {
+    "id": 365,
+    "level": "easy",
+    "question": "Which ocean is the largest?",
+    "answers": ["Indian", "Atlantic", "Pacific", "Arctic"],
+    "correctIndex": 2,
+    "money": 1000,
+    "hint": "Covers more than 30% of Earth's surface"
+  },
+  {
+    "id": 366,
+    "level": "medium",
+    "question": "Which blood type is the universal donor?",
+    "answers": ["O+", "O-", "A-", "AB+"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Negative type"
+  },
+  {
+    "id": 367,
+    "level": "medium",
+    "question": "What is the main ingredient in traditional Japanese miso soup?",
+    "answers": ["Tofu", "Miso paste", "Seaweed", "Rice"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Fermented soybean paste"
+  },
+  {
+    "id": 368,
+    "level": "medium",
+    "question": "Which gas makes up most of Earth's atmosphere?",
+    "answers": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Argon"],
+    "correctIndex": 2,
+    "money": 8000,
+    "hint": "Around 78%"
+  },
+  {
+    "id": 369,
+    "level": "medium",
+    "question": "Which is the largest country in the world by area?",
+    "answers": ["Canada", "Russia", "China", "USA"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Spans Europe and Asia"
+  },
+  {
+    "id": 370,
+    "level": "medium",
+    "question": "Which African country was formerly called Abyssinia?",
+    "answers": ["Ethiopia", "Sudan", "Eritrea", "Somalia"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Capital is Addis Ababa"
+  },
+  {
+    "id": 371,
+    "level": "hard",
+    "question": "What is the fastest fish in the ocean?",
+    "answers": ["Marlin", "Swordfish", "Sailfish", "Tuna"],
+    "correctIndex": 2,
+    "money": 64000,
+    "hint": "Can reach speeds of 68 mph"
+  },
+  {
+    "id": 372,
+    "level": "hard",
+    "question": "Which country is home to the most volcanoes?",
+    "answers": ["Japan", "Indonesia", "USA", "Iceland"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "Located in the Pacific Ring of Fire"
+  },
+  {
+    "id": 373,
+    "level": "hard",
+    "question": "Which is the smallest country in the world by area?",
+    "answers": ["Monaco", "Vatican City", "Nauru", "San Marino"],
+    "correctIndex": 1,
+    "money": 250000,
+    "hint": "Inside Rome"
+  },
+  {
+    "id": 374,
+    "level": "hard",
+    "question": "Who invented the telephone?",
+    "answers": ["Alexander Graham Bell", "Thomas Edison", "Nikola Tesla", "Michael Faraday"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "Scottish-born inventor"
+  },
+  {
+    "id": 375,
+    "level": "hard",
+    "question": "Which planet has the Great Red Spot?",
+    "answers": ["Saturn", "Jupiter", "Neptune", "Uranus"],
+    "correctIndex": 1,
+    "money": 1000000,
+    "hint": "Gas giant"
+  },
+  {
+    "id": 376,
+    "level": "easy",
+    "question": "Which is the largest mammal in the world?",
+    "answers": ["Elephant", "Blue Whale", "Hippo", "Giraffe"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Lives in the ocean"
+  },
+  {
+    "id": 377,
+    "level": "easy",
+    "question": "What color do you get by mixing red and white?",
+    "answers": ["Pink", "Purple", "Orange", "Brown"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Often associated with romance"
+  },
+  {
+    "id": 378,
+    "level": "easy",
+    "question": "Which sport is associated with Wimbledon?",
+    "answers": ["Football", "Tennis", "Cricket", "Golf"],
+    "correctIndex": 1,
+    "money": 300,
+    "hint": "Played on grass courts"
+  },
+  {
+    "id": 379,
+    "level": "easy",
+    "question": "Which animal is famous for its black and white stripes?",
+    "answers": ["Tiger", "Zebra", "Panda", "Skunk"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Lives in Africa"
+  },
+  {
+    "id": 380,
+    "level": "easy",
+    "question": "Which country is known for pizza?",
+    "answers": ["France", "Italy", "Spain", "USA"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Capital is Rome"
+  },
+  {
+    "id": 381,
+    "level": "medium",
+    "question": "Which ocean is the smallest?",
+    "answers": ["Arctic", "Indian", "Atlantic", "Southern"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Located around the North Pole"
+  },
+  {
+    "id": 382,
+    "level": "medium",
+    "question": "What is the national flower of Japan?",
+    "answers": ["Lotus", "Cherry Blossom", "Rose", "Sunflower"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Sakura"
+  },
+  {
+    "id": 383,
+    "level": "medium",
+    "question": "Which desert is the largest in the world?",
+    "answers": ["Sahara", "Antarctic", "Gobi", "Kalahari"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Cold desert"
+  },
+  {
+    "id": 384,
+    "level": "medium",
+    "question": "Which is the capital city of Canada?",
+    "answers": ["Toronto", "Ottawa", "Vancouver", "Montreal"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Located in Ontario"
+  },
+  {
+    "id": 385,
+    "level": "medium",
+    "question": "Who painted 'Girl with a Pearl Earring'?",
+    "answers": ["Vermeer", "Rembrandt", "Van Gogh", "Rubens"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Dutch Golden Age painter"
+  },
+  {
+    "id": 386,
+    "level": "hard",
+    "question": "Which is the deepest ocean trench in the world?",
+    "answers": ["Mariana Trench", "Tonga Trench", "Java Trench", "Puerto Rico Trench"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Over 10,900 meters deep"
+  },
+  {
+    "id": 387,
+    "level": "hard",
+    "question": "Which country hosted the 2010 FIFA World Cup?",
+    "answers": ["Brazil", "South Africa", "Germany", "France"],
+    "correctIndex": 1,
+    "money": 125000,
+    "hint": "First time in Africa"
+  },
+  {
+    "id": 388,
+    "level": "hard",
+    "question": "Which planet rotates on its side?",
+    "answers": ["Uranus", "Neptune", "Venus", "Mars"],
+    "correctIndex": 0,
+    "money": 250000,
+    "hint": "Tilt of about 98 degrees"
+  },
+  {
+    "id": 389,
+    "level": "hard",
+    "question": "Who wrote 'The Divine Comedy'?",
+    "answers": ["Dante Alighieri", "Geoffrey Chaucer", "John Milton", "Homer"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "Italian poet"
+  },
+  {
+    "id": 390,
+    "level": "hard",
+    "question": "Which is the largest living reptile?",
+    "answers": ["Komodo Dragon", "Saltwater Crocodile", "Green Anaconda", "Leatherback Turtle"],
+    "correctIndex": 1,
+    "money": 1000000,
+    "hint": "Found in Southeast Asia and Australia"
+  },
+  {
+    "id": 391,
+    "level": "easy",
+    "question": "Which fruit is famous for having seeds on the outside?",
+    "answers": ["Apple", "Strawberry", "Grapes", "Banana"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Red and sweet"
+  },
+  {
+    "id": 392,
+    "level": "easy",
+    "question": "Which animal produces honey?",
+    "answers": ["Bee", "Ant", "Butterfly", "Wasp"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Lives in hives"
+  },
+  {
+    "id": 393,
+    "level": "easy",
+    "question": "Which country is home to the Eiffel Tower?",
+    "answers": ["France", "Italy", "Spain", "Germany"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "City of Love"
+  },
+  {
+    "id": 394,
+    "level": "easy",
+    "question": "Which planet is known as the Morning Star?",
+    "answers": ["Venus", "Mars", "Mercury", "Jupiter"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Also Earth's twin"
+  },
+  {
+    "id": 395,
+    "level": "easy",
+    "question": "What is the capital city of Thailand?",
+    "answers": ["Bangkok", "Chiang Mai", "Phuket", "Pattaya"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Known for floating markets"
+  },
+  {
+    "id": 396,
+    "level": "medium",
+    "question": "What is the main ingredient in tofu?",
+    "answers": ["Soybeans", "Rice", "Corn", "Wheat"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Rich in protein"
+  },
+  {
+    "id": 397,
+    "level": "medium",
+    "question": "Which country gifted the Statue of Liberty to the USA?",
+    "answers": ["France", "UK", "Germany", "Canada"],
+    "correctIndex": 0,
+    "money": 4000,
+    "hint": "Eiffel Tower country"
+  },
+  {
+    "id": 398,
+    "level": "medium",
+    "question": "Which element has the chemical symbol 'Na'?",
+    "answers": ["Sodium", "Nitrogen", "Neon", "Nickel"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Used in table salt"
+  },
+  {
+    "id": 399,
+    "level": "medium",
+    "question": "Which year did humans first land on the Moon?",
+    "answers": ["1965", "1969", "1972", "1975"],
+    "correctIndex": 1,
+    "money": 16000,
+    "hint": "Neil Armstrong"
+  },
+  {
+    "id": 400,
+    "level": "medium",
+    "question": "Which is the capital city of Australia?",
+    "answers": ["Sydney", "Melbourne", "Canberra", "Perth"],
+    "correctIndex": 2,
+    "money": 32000,
+    "hint": "Not the largest city"
+  },
+  {
+    "id": 401,
+    "level": "easy",
+    "question": "Which company created the iPhone?",
+    "answers": ["Apple", "Samsung", "Nokia", "Sony"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Founded by Steve Jobs"
+  },
+  {
+    "id": 402,
+    "level": "easy",
+    "question": "Which animal is known for its black and white stripes?",
+    "answers": ["Zebra", "Tiger", "Panda", "Skunk"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Lives in African grasslands"
+  },
+  {
+    "id": 403,
+    "level": "easy",
+    "question": "What is sushi traditionally wrapped in?",
+    "answers": ["Seaweed", "Rice paper", "Lettuce", "Pita bread"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "Also called nori"
+  },
+  {
+    "id": 404,
+    "level": "easy",
+    "question": "Which streaming service released the series 'Stranger Things'?",
+    "answers": ["Netflix", "Amazon Prime", "Disney+", "HBO Max"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Red logo with N"
+  },
+  {
+    "id": 405,
+    "level": "easy",
+    "question": "Which gas do humans need to breathe?",
+    "answers": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Helium"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Makes up about 21% of air"
+  },
+  {
+    "id": 406,
+    "level": "medium",
+    "question": "Which programming language is known for its snake logo?",
+    "answers": ["Java", "Python", "C++", "Ruby"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Named after a comedy group"
+  },
+  {
+    "id": 407,
+    "level": "medium",
+    "question": "Which fruit is known as the 'king of fruits' in Southeast Asia?",
+    "answers": ["Mango", "Durian", "Jackfruit", "Papaya"],
+    "correctIndex": 1,
+    "money": 4000,
+    "hint": "Famous for strong smell"
+  },
+  {
+    "id": 408,
+    "level": "medium",
+    "question": "Which band released the album 'Abbey Road'?",
+    "answers": ["The Beatles", "The Rolling Stones", "Queen", "Pink Floyd"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "From Liverpool"
+  },
+  {
+    "id": 409,
+    "level": "medium",
+    "question": "Which mammal can fly?",
+    "answers": ["Bat", "Flying squirrel", "Eagle", "Penguin"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Uses echolocation"
+  },
+  {
+    "id": 410,
+    "level": "medium",
+    "question": "What natural phenomenon is measured by the Richter scale?",
+    "answers": ["Tornado", "Earthquake", "Volcano", "Hurricane"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "Caused by tectonic movement"
+  },
+  {
+    "id": 411,
+    "level": "hard",
+    "question": "Which company developed the first microprocessor?",
+    "answers": ["IBM", "Intel", "AMD", "Motorola"],
+    "correctIndex": 1,
+    "money": 64000,
+    "hint": "Model 4004 in 1971"
+  },
+  {
+    "id": 412,
+    "level": "hard",
+    "question": "Which Italian composer wrote 'The Four Seasons'?",
+    "answers": ["Antonio Vivaldi", "Giuseppe Verdi", "Gioachino Rossini", "Claudio Monteverdi"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "Baroque era violinist"
+  },
+  {
+    "id": 413,
+    "level": "hard",
+    "question": "What is the main ingredient of the dish 'Hummus'?",
+    "answers": ["Chickpeas", "Lentils", "Peanuts", "Soybeans"],
+    "correctIndex": 0,
+    "money": 250000,
+    "hint": "Blended with tahini"
+  },
+  {
+    "id": 414,
+    "level": "hard",
+    "question": "Which bird is the fastest in the world?",
+    "answers": ["Peregrine Falcon", "Golden Eagle", "Swift", "Albatross"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "Can dive over 300 km/h"
+  },
+  {
+    "id": 415,
+    "level": "hard",
+    "question": "What is the process by which plants make their own food?",
+    "answers": ["Respiration", "Photosynthesis", "Fermentation", "Transpiration"],
+    "correctIndex": 1,
+    "money": 1000000,
+    "hint": "Uses sunlight"
+  },
+  {
+    "id": 416,
+    "level": "easy",
+    "question": "Which popular video game series features characters named Mario and Luigi?",
+    "answers": ["Sonic", "Mario Bros", "Zelda", "Pokemon"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Plumber brothers"
+  },
+  {
+    "id": 417,
+    "level": "easy",
+    "question": "Which nut is used to make marzipan?",
+    "answers": ["Almond", "Peanut", "Walnut", "Cashew"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Has a mild flavor"
+  },
+  {
+    "id": 418,
+    "level": "easy",
+    "question": "Which singer is known as the 'King of Pop'?",
+    "answers": ["Michael Jackson", "Elvis Presley", "Freddie Mercury", "Prince"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "Famous for Moonwalk"
+  },
+  {
+    "id": 419,
+    "level": "easy",
+    "question": "What is the main diet of a koala?",
+    "answers": ["Bamboo", "Eucalyptus leaves", "Grass", "Fruit"],
+    "correctIndex": 1,
+    "money": 500,
+    "hint": "Only eats certain leaves"
+  },
+  {
+    "id": 420,
+    "level": "easy",
+    "question": "What type of storm is classified by categories 1 to 5?",
+    "answers": ["Hurricane", "Tornado", "Blizzard", "Dust storm"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Formed over warm oceans"
+  },
+  {
+    "id": 421,
+    "level": "medium",
+    "question": "Which company owns the video conferencing platform Zoom?",
+    "answers": ["Zoom Inc.", "Google", "Microsoft", "Meta"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Founded by Eric Yuan"
+  },
+  {
+    "id": 422,
+    "level": "medium",
+    "question": "Which spice is known as 'saffron'?",
+    "answers": ["Crocus stigma", "Turmeric root", "Cinnamon bark", "Clove buds"],
+    "correctIndex": 0,
+    "money": 4000,
+    "hint": "Most expensive spice"
+  },
+  {
+    "id": 423,
+    "level": "medium",
+    "question": "Which singer performed the hit song 'Hello' in 2015?",
+    "answers": ["Adele", "Taylor Swift", "Beyoncé", "Lady Gaga"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "British soul singer"
+  },
+  {
+    "id": 424,
+    "level": "medium",
+    "question": "Which marine creature has three hearts?",
+    "answers": ["Octopus", "Shark", "Whale", "Dolphin"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Eight arms"
+  },
+  {
+    "id": 425,
+    "level": "medium",
+    "question": "Which phenomenon is caused by the refraction of light in water droplets?",
+    "answers": ["Rainbow", "Aurora", "Mirage", "Halo"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Appears after rain"
+  },
+  {
+    "id": 426,
+    "level": "hard",
+    "question": "Which tech company created the 'Alexa' virtual assistant?",
+    "answers": ["Apple", "Amazon", "Google", "Microsoft"],
+    "correctIndex": 1,
+    "money": 64000,
+    "hint": "Also owns Kindle"
+  },
+  {
+    "id": 427,
+    "level": "hard",
+    "question": "Which opera includes the aria 'Nessun Dorma'?",
+    "answers": ["Turandot", "La Traviata", "Carmen", "The Magic Flute"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "Composed by Puccini"
+  },
+  {
+    "id": 428,
+    "level": "hard",
+    "question": "What is the main ingredient of the Japanese dish miso soup?",
+    "answers": ["Soybean paste", "Fish stock", "Rice", "Seaweed"],
+    "correctIndex": 0,
+    "money": 250000,
+    "hint": "Fermented"
+  },
+  {
+    "id": 429,
+    "level": "hard",
+    "question": "Which mammal lays eggs?",
+    "answers": ["Platypus", "Bat", "Opossum", "Hedgehog"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "Semi-aquatic from Australia"
+  },
+  {
+    "id": 430,
+    "level": "hard",
+    "question": "Which phenomenon causes the Northern Lights?",
+    "answers": ["Solar wind", "Volcanic ash", "Meteor showers", "Magnetic storms"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Also called Aurora Borealis"
+  },
+  {
+    "id": 431,
+    "level": "easy",
+    "question": "Which company developed the Windows operating system?",
+    "answers": ["Apple", "Microsoft", "IBM", "Google"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Founded by Bill Gates"
+  },
+  {
+    "id": 432,
+    "level": "easy",
+    "question": "Which fruit is known for its high vitamin C content?",
+    "answers": ["Banana", "Orange", "Apple", "Grapes"],
+    "correctIndex": 1,
+    "money": 200,
+    "hint": "Citrus fruit"
+  },
+  {
+    "id": 433,
+    "level": "easy",
+    "question": "Who sang the hit 'Shape of You'?",
+    "answers": ["Ed Sheeran", "Justin Bieber", "Bruno Mars", "Shawn Mendes"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "British singer-songwriter"
+  },
+  {
+    "id": 434,
+    "level": "easy",
+    "question": "Which animal is known for building dams?",
+    "answers": ["Beaver", "Otter", "Muskrat", "Capybara"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Rodent with large teeth"
+  },
+  {
+    "id": 435,
+    "level": "easy",
+    "question": "What is the frozen form of water called?",
+    "answers": ["Snow", "Ice", "Hail", "Frost"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Solid state"
+  },
+  {
+    "id": 436,
+    "level": "medium",
+    "question": "Which social media platform is known for short videos and owned by ByteDance?",
+    "answers": ["Instagram", "TikTok", "Snapchat", "YouTube"],
+    "correctIndex": 1,
+    "money": 2000,
+    "hint": "Chinese origin"
+  },
+  {
+    "id": 437,
+    "level": "medium",
+    "question": "What is the main ingredient in guacamole?",
+    "answers": ["Avocado", "Tomato", "Cucumber", "Lettuce"],
+    "correctIndex": 0,
+    "money": 4000,
+    "hint": "Green fruit"
+  },
+  {
+    "id": 438,
+    "level": "medium",
+    "question": "Which movie won the Best Picture Oscar in 1998?",
+    "answers": ["Titanic", "Shakespeare in Love", "Saving Private Ryan", "The Matrix"],
+    "correctIndex": 1,
+    "money": 8000,
+    "hint": "Romantic drama about a playwright"
+  },
+  {
+    "id": 439,
+    "level": "medium",
+    "question": "Which bird is known for its colorful feathers and mimicking sounds?",
+    "answers": ["Parrot", "Peacock", "Canary", "Macaw"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Often kept as a pet"
+  },
+  {
+    "id": 440,
+    "level": "medium",
+    "question": "Which phenomenon occurs when the moon passes between the Earth and the Sun?",
+    "answers": ["Lunar eclipse", "Solar eclipse", "Meteor shower", "Aurora"],
+    "correctIndex": 1,
+    "money": 32000,
+    "hint": "Happens during the day"
+  },
+  {
+    "id": 441,
+    "level": "hard",
+    "question": "What year was the World Wide Web introduced to the public?",
+    "answers": ["1989", "1991", "1993", "1995"],
+    "correctIndex": 2,
+    "money": 64000,
+    "hint": "Early 90s technology boom"
+  },
+  {
+    "id": 442,
+    "level": "hard",
+    "question": "Who composed the opera 'Carmen'?",
+    "answers": ["Bizet", "Mozart", "Puccini", "Rossini"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "French composer"
+  },
+  {
+    "id": 443,
+    "level": "hard",
+    "question": "Which type of pasta is shaped like small rice grains?",
+    "answers": ["Orzo", "Penne", "Fusilli", "Rigatoni"],
+    "correctIndex": 0,
+    "money": 250000,
+    "hint": "Often used in soups"
+  },
+  {
+    "id": 444,
+    "level": "hard",
+    "question": "Which large mammal is native to Africa and has a horn on its snout?",
+    "answers": ["Rhinoceros", "Hippopotamus", "Buffalo", "Elephant"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "Can have one or two horns"
+  },
+  {
+    "id": 445,
+    "level": "hard",
+    "question": "What causes ocean tides?",
+    "answers": ["Wind", "Earth's rotation", "Moon's gravity", "Sun's heat"],
+    "correctIndex": 2,
+    "money": 1000000,
+    "hint": "Pull from celestial body"
+  },
+  {
+    "id": 446,
+    "level": "easy",
+    "question": "Which company created the PlayStation console?",
+    "answers": ["Nintendo", "Sony", "Microsoft", "Sega"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Japanese electronics giant"
+  },
+  {
+    "id": 447,
+    "level": "easy",
+    "question": "Which vegetable is known for making people cry when cut?",
+    "answers": ["Onion", "Garlic", "Leek", "Shallot"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Bulb vegetable"
+  },
+  {
+    "id": 448,
+    "level": "easy",
+    "question": "Who sang the song 'Bad Romance'?",
+    "answers": ["Lady Gaga", "Rihanna", "Katy Perry", "Madonna"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "Known as Mother Monster"
+  },
+  {
+    "id": 449,
+    "level": "easy",
+    "question": "Which bear species is native to China and eats bamboo?",
+    "answers": ["Panda", "Grizzly", "Polar", "Black Bear"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Black and white"
+  },
+  {
+    "id": 450,
+    "level": "easy",
+    "question": "What do we call rain that freezes as it falls?",
+    "answers": ["Hail", "Sleet", "Snow", "Freezing rain"],
+    "correctIndex": 1,
+    "money": 1000,
+    "hint": "Small ice pellets"
+  },
+  {
+    "id": 451,
+    "level": "medium",
+    "question": "What is the name of the first computer mouse inventor?",
+    "answers": ["Douglas Engelbart", "Steve Jobs", "Alan Turing", "Bill Gates"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Invented in 1964"
+  },
+  {
+    "id": 452,
+    "level": "medium",
+    "question": "Which fruit is used to make wine?",
+    "answers": ["Grapes", "Apples", "Plums", "Pears"],
+    "correctIndex": 0,
+    "money": 4000,
+    "hint": "Purple or green"
+  },
+  {
+    "id": 453,
+    "level": "medium",
+    "question": "Who directed the movie 'Inception'?",
+    "answers": ["Christopher Nolan", "James Cameron", "Steven Spielberg", "Ridley Scott"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Also directed The Dark Knight"
+  },
+  {
+    "id": 454,
+    "level": "medium",
+    "question": "Which mammal can fly?",
+    "answers": ["Bat", "Flying Squirrel", "Sugar Glider", "None"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Uses echolocation"
+  },
+  {
+    "id": 455,
+    "level": "medium",
+    "question": "What is the term for the meeting point of two rivers?",
+    "answers": ["Confluence", "Delta", "Estuary", "Tributary"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Often forms a Y-shape"
+  },
+  {
+    "id": 456,
+    "level": "hard",
+    "question": "What was the first video game to be played in space?",
+    "answers": ["Tetris", "Pong", "Super Mario Bros", "Pac-Man"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Played on a Game Boy in 1993"
+  },
+  {
+    "id": 457,
+    "level": "hard",
+    "question": "Who composed the music for the film 'The Lion King'?",
+    "answers": ["Hans Zimmer", "John Williams", "Alan Menken", "Howard Shore"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "Also composed for Interstellar"
+  },
+  {
+    "id": 458,
+    "level": "hard",
+    "question": "Which country is famous for the dish 'Paella'?",
+    "answers": ["Spain", "Italy", "Portugal", "France"],
+    "correctIndex": 0,
+    "money": 250000,
+    "hint": "Valencia specialty"
+  },
+  {
+    "id": 459,
+    "level": "hard",
+    "question": "What is the fastest marine mammal?",
+    "answers": ["Orca", "Dolphin", "Blue Whale", "Sailfish"],
+    "correctIndex": 1,
+    "money": 500000,
+    "hint": "Bottlenose species is very agile"
+  },
+  {
+    "id": 460,
+    "level": "hard",
+    "question": "What is the name of the bright lights seen near the poles?",
+    "answers": ["Aurora Borealis", "Aurora Australis", "Solar Flare", "Meteor Shower"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Northern Lights"
+  },
+  {
+    "id": 461,
+    "level": "easy",
+    "question": "Which tech company makes the iPhone?",
+    "answers": ["Apple", "Samsung", "Huawei", "Google"],
+    "correctIndex": 0,
+    "money": 100,
+    "hint": "Founded by Steve Jobs"
+  },
+  {
+    "id": 462,
+    "level": "easy",
+    "question": "Which vegetable is the main ingredient in French fries?",
+    "answers": ["Potato", "Carrot", "Sweet Potato", "Turnip"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Tubers"
+  },
+  {
+    "id": 463,
+    "level": "easy",
+    "question": "Who is known as the 'King of Pop'?",
+    "answers": ["Michael Jackson", "Elvis Presley", "Prince", "Justin Timberlake"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "Famous for Moonwalk"
+  },
+  {
+    "id": 464,
+    "level": "easy",
+    "question": "Which bird lays the largest eggs?",
+    "answers": ["Ostrich", "Eagle", "Emu", "Penguin"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Flightless bird"
+  },
+  {
+    "id": 465,
+    "level": "easy",
+    "question": "What is frozen rain called?",
+    "answers": ["Hail", "Snow", "Frost", "Ice"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Hard ice pellets"
+  },
+  {
+    "id": 466,
+    "level": "medium",
+    "question": "What programming language is known for its snake logo?",
+    "answers": ["Python", "Java", "C++", "Ruby"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Popular in AI and data science"
+  },
+  {
+    "id": 467,
+    "level": "medium",
+    "question": "Which herb is used to make pesto sauce?",
+    "answers": ["Basil", "Parsley", "Thyme", "Cilantro"],
+    "correctIndex": 0,
+    "money": 4000,
+    "hint": "Green leaves"
+  },
+  {
+    "id": 468,
+    "level": "medium",
+    "question": "Who played Jack Dawson in Titanic?",
+    "answers": ["Leonardo DiCaprio", "Brad Pitt", "Tom Cruise", "Johnny Depp"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Also starred in Inception"
+  },
+  {
+    "id": 469,
+    "level": "medium",
+    "question": "What type of animal is a Komodo dragon?",
+    "answers": ["Lizard", "Snake", "Crocodile", "Turtle"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Largest living species of its kind"
+  },
+  {
+    "id": 470,
+    "level": "medium",
+    "question": "What is the process of water changing into vapor called?",
+    "answers": ["Evaporation", "Condensation", "Precipitation", "Sublimation"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Occurs on sunny days"
+  },
+  {
+    "id": 471,
+    "level": "hard",
+    "question": "Which was the first commercially successful video game?",
+    "answers": ["Pong", "Space Invaders", "Pac-Man", "Asteroids"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Released in 1972"
+  },
+  {
+    "id": 472,
+    "level": "hard",
+    "question": "Which band released the album 'Dark Side of the Moon'?",
+    "answers": ["Pink Floyd", "The Beatles", "Queen", "Led Zeppelin"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "Progressive rock legends"
+  },
+  {
+    "id": 473,
+    "level": "hard",
+    "question": "Which country is the origin of sushi?",
+    "answers": ["Japan", "China", "Korea", "Thailand"],
+    "correctIndex": 0,
+    "money": 250000,
+    "hint": "Island nation"
+  },
+  {
+    "id": 474,
+    "level": "hard",
+    "question": "Which mammal has the longest gestation period?",
+    "answers": ["Elephant", "Whale", "Giraffe", "Camel"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "About 22 months"
+  },
+  {
+    "id": 475,
+    "level": "hard",
+    "question": "What is the phenomenon where the sun is visible at midnight?",
+    "answers": ["Midnight Sun", "Aurora", "Eclipse", "Equinox"],
+    "correctIndex": 0,
+    "money": 1000000,
+    "hint": "Occurs in polar regions"
+  },
+  {
+    "id": 476,
+    "level": "easy",
+    "question": "Which search engine is owned by Google?",
+    "answers": ["Bing", "Yahoo", "Google Search", "DuckDuckGo"],
+    "correctIndex": 2,
+    "money": 100,
+    "hint": "World's most used search engine"
+  },
+  {
+    "id": 477,
+    "level": "easy",
+    "question": "Which nut is used to make marzipan?",
+    "answers": ["Almond", "Cashew", "Pistachio", "Peanut"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Also used in almond milk"
+  },
+  {
+    "id": 478,
+    "level": "easy",
+    "question": "Who sang 'Hello' in 2015?",
+    "answers": ["Adele", "Beyoncé", "Taylor Swift", "Selena Gomez"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "British singer"
+  },
+  {
+    "id": 479,
+    "level": "easy",
+    "question": "Which animal is known as the ship of the desert?",
+    "answers": ["Camel", "Horse", "Donkey", "Llama"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Has a hump"
+  },
+  {
+    "id": 480,
+    "level": "easy",
+    "question": "What is rain mixed with snow called?",
+    "answers": ["Sleet", "Hail", "Snow Shower", "Freezing rain"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Winter precipitation"
+  },
+  {
+    "id": 481,
+    "level": "medium",
+    "question": "Which programming language was created by James Gosling?",
+    "answers": ["Java", "C", "Python", "JavaScript"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Coffee name"
+  },
+  {
+    "id": 482,
+    "level": "medium",
+    "question": "Which cheese is traditionally used on pizza?",
+    "answers": ["Mozzarella", "Cheddar", "Parmesan", "Gouda"],
+    "correctIndex": 0,
+    "money": 4000,
+    "hint": "Soft and stretchy"
+  },
+  {
+    "id": 483,
+    "level": "medium",
+    "question": "Which actor played Iron Man in the Marvel movies?",
+    "answers": ["Robert Downey Jr.", "Chris Evans", "Mark Ruffalo", "Tom Holland"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Also starred in Sherlock Holmes"
+  },
+  {
+    "id": 484,
+    "level": "medium",
+    "question": "What type of animal is a barracuda?",
+    "answers": ["Fish", "Shark", "Mammal", "Reptile"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Fast predator"
+  },
+  {
+    "id": 485,
+    "level": "medium",
+    "question": "What is the scientific term for rain, snow, sleet, or hail?",
+    "answers": ["Precipitation", "Condensation", "Evaporation", "Transpiration"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Water falls from the sky"
+  },
+  {
+    "id": 486,
+    "level": "hard",
+    "question": "What was the first smartphone to use the Android OS?",
+    "answers": ["HTC Dream", "Samsung Galaxy", "Motorola Droid", "Nexus One"],
+    "correctIndex": 0,
+    "money": 64000,
+    "hint": "Released in 2008"
+  },
+  {
+    "id": 487,
+    "level": "hard",
+    "question": "Which composer wrote 'The Four Seasons'?",
+    "answers": ["Vivaldi", "Bach", "Mozart", "Beethoven"],
+    "correctIndex": 0,
+    "money": 125000,
+    "hint": "Italian Baroque composer"
+  },
+  {
+    "id": 488,
+    "level": "hard",
+    "question": "Which spice is obtained from the bark of a tree?",
+    "answers": ["Cinnamon", "Clove", "Nutmeg", "Cardamom"],
+    "correctIndex": 0,
+    "money": 250000,
+    "hint": "Sweet and aromatic"
+  },
+  {
+    "id": 489,
+    "level": "hard",
+    "question": "Which bird can fly backwards?",
+    "answers": ["Hummingbird", "Kingfisher", "Swallow", "Woodpecker"],
+    "correctIndex": 0,
+    "money": 500000,
+    "hint": "Tiny and fast wings"
+  },
+  {
+    "id": 490,
+    "level": "hard",
+    "question": "What is the term for an earthquake under the sea?",
+    "answers": ["Submarine quake", "Tsunami", "Seismic wave", "Undersea shock"],
+    "correctIndex": 1,
+    "money": 1000000,
+    "hint": "Causes massive waves"
+  },
+  {
+    "id": 491,
+    "level": "easy",
+    "question": "Which company created the Android OS?",
+    "answers": ["Apple", "Google", "Microsoft", "Samsung"],
+    "correctIndex": 1,
+    "money": 100,
+    "hint": "Search engine giant"
+  },
+  {
+    "id": 492,
+    "level": "easy",
+    "question": "What is the main ingredient in hummus?",
+    "answers": ["Chickpeas", "Lentils", "Beans", "Corn"],
+    "correctIndex": 0,
+    "money": 200,
+    "hint": "Legume"
+  },
+  {
+    "id": 493,
+    "level": "easy",
+    "question": "Who sang 'Thriller'?",
+    "answers": ["Michael Jackson", "Prince", "Elton John", "Stevie Wonder"],
+    "correctIndex": 0,
+    "money": 300,
+    "hint": "Also called MJ"
+  },
+  {
+    "id": 494,
+    "level": "easy",
+    "question": "Which animal has black stripes on orange fur?",
+    "answers": ["Tiger", "Leopard", "Jaguar", "Cheetah"],
+    "correctIndex": 0,
+    "money": 500,
+    "hint": "Big cat"
+  },
+  {
+    "id": 495,
+    "level": "easy",
+    "question": "What is water in gas form called?",
+    "answers": ["Steam", "Mist", "Fog", "Cloud"],
+    "correctIndex": 0,
+    "money": 1000,
+    "hint": "Produced when boiling"
+  },
+  {
+    "id": 496,
+    "level": "medium",
+    "question": "Which company makes the Surface laptop?",
+    "answers": ["Microsoft", "Apple", "HP", "Dell"],
+    "correctIndex": 0,
+    "money": 2000,
+    "hint": "Also develops Windows"
+  },
+  {
+    "id": 497,
+    "level": "medium",
+    "question": "What type of pasta is shaped like small ears?",
+    "answers": ["Orecchiette", "Fusilli", "Penne", "Linguine"],
+    "correctIndex": 0,
+    "money": 4000,
+    "hint": "Italian for 'little ears'"
+  },
+  {
+    "id": 498,
+    "level": "medium",
+    "question": "Who played Forrest Gump in the movie?",
+    "answers": ["Tom Hanks", "Robin Williams", "Kevin Costner", "Matt Damon"],
+    "correctIndex": 0,
+    "money": 8000,
+    "hint": "Also in Cast Away"
+  },
+  {
+    "id": 499,
+    "level": "medium",
+    "question": "What type of animal is a platypus?",
+    "answers": ["Mammal", "Reptile", "Bird", "Amphibian"],
+    "correctIndex": 0,
+    "money": 16000,
+    "hint": "Lays eggs but feeds milk"
+  },
+  {
+    "id": 500,
+    "level": "medium",
+    "question": "What is the term for wind rotating around a low-pressure center?",
+    "answers": ["Cyclone", "Tornado", "Hurricane", "Typhoon"],
+    "correctIndex": 0,
+    "money": 32000,
+    "hint": "Common in Indian Ocean"
+  }
+]

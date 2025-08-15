@@ -1,6 +1,23 @@
 <script setup lang="ts">
 
 useHead({
+    title: 'Millionaire Quiz - Become a Millionaire',
+    meta: [
+        { name: 'description', content: 'Play Millionaire Quiz and answer 15 questions to become a millionaire. Enjoy lifelines, prize ladder, and hundreds of fun questions.' },
+        { name: 'keywords', content: 'Millionaire Quiz, Who Wants to Be a Millionaire, trivia, quiz game, knowledge challenge' },
+        { property: 'og:title', content: 'Millionaire Quiz - Become a Millionaire' },
+        { property: 'og:description', content: 'Challenge your knowledge with 15 questions and climb the prize ladder to win big.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://yourdomain.com' },
+        { property: 'og:image', content: 'https://yourdomain.com/og-image.jpg' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'Millionaire Quiz - Become a Millionaire' },
+        { name: 'twitter:description', content: 'Play Millionaire Quiz, answer 15 questions, and win the grand prize.' },
+        { name: 'twitter:image', content: 'https://yourdomain.com/twitter-image.jpg' }
+    ],
+    htmlAttrs: {
+        lang: 'en'
+    },
     bodyAttrs: {
         class: 'text-white font-sans antialiased overflow-hidden'
     }
