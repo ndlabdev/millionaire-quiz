@@ -1,4 +1,9 @@
 <script setup lang="ts">
+
+interface Props {
+    lifelines?: 'fiftyFifty' | 'askAudience' | 'phoneFriend'
+}
+
 type Question = {
     id: number
     level: 'easy' | 'medium' | 'hard'
@@ -33,23 +38,96 @@ const countdown = ref(0)
 let countdownTimer: number | null = null
 const answerLabels = ['A:', 'B:', 'C:', 'D:']
 
+const removedAnswers = ref<number[]>([])
+const audienceResult = ref<number[]>([])
+const phoneSuggestion = ref<number | null>(null)
+
+const props = defineProps<Props>()
+const lifelines = toRef(props, 'lifelines')
+
+watch(lifelines, (val) => {
+    if (!val || !currentQuestion.value) return
+
+    const cq = currentQuestion.value
+    const correctIndex: number = cq.correctIndex
+
+    if (val === 'fiftyFifty') {
+        const wrongIndexes = cq.answers.map((_, i) => i).filter(i => i !== correctIndex)
+        removedAnswers.value = wrongIndexes.sort(() => 0.5 - Math.random()).slice(0, 2)
+    }
+
+    if (val === 'askAudience') {
+        const percentages: [number, number, number, number] = [0, 0, 0, 0]
+        const correctIndex = cq.correctIndex as number
+
+        percentages[correctIndex] = Math.floor(Math.random() * 30) + 40
+
+        const wrongIndexes = [0, 1, 2, 3].filter(i => i !== correctIndex)
+        wrongIndexes.forEach((idx, i) => {
+            if (i === wrongIndexes.length - 1) {
+                percentages[idx] = 100 - percentages.reduce((a, b) => a + b, 0)
+            } else {
+                const v = Math.floor(Math.random() * ((100 - Number(percentages[correctIndex])) / 2))
+                percentages[idx] = v
+            }
+        })
+
+        audienceResult.value = percentages
+    }
+
+    if (val === 'phoneFriend') {
+        const isCorrect = Math.random() < 0.75
+        phoneSuggestion.value = isCorrect
+            ? correctIndex
+            : ([0, 1, 2, 3].filter(i => i !== correctIndex)[Math.floor(Math.random() * 3)] ?? 0)
+    }
+})
+
 // --- Voice ---
-async function speakText(text: string, lang = 'en-US', rate = 1, pitch = 1.2) {
+function speakText(text: string, lang = 'en-US', rate = 1, pitch = 1.2) {
     return new Promise<void>((resolve) => {
-        if (!('speechSynthesis' in window)) return resolve()
+        if (!('speechSynthesis' in window)) {
+            console.warn('SpeechSynthesis API is not supported in this browser.')
+            resolve()
+            return
+        }
 
         const synth = window.speechSynthesis
         let voices: SpeechSynthesisVoice[] = []
 
         const loadVoices = () => {
             voices = synth.getVoices()
-            const voice = voices.find(v => v.lang === lang) || voices[0]
+
+            const femaleKeywords = [
+                'female', 'nữ', 'woman',
+                'Zira', 'Samantha', 'Eva', 'Joanna',
+                'Google US English Female', 'Google UK English Female'
+            ]
+
+            let voice = voices.find(v =>
+                v.lang === lang
+                && femaleKeywords.some(keyword =>
+                    v.name.toLowerCase().includes(keyword.toLowerCase())
+                )
+            )
+
+            if (!voice) {
+                voice = voices.find(v => v.lang === lang)
+            }
+
+            if (!voice) {
+                voice = voices[0]
+            }
+
+            console.log('🎤 Voice selected:', voice?.name)
+
             const utter = new SpeechSynthesisUtterance(text)
             utter.voice = voice || null
             utter.lang = lang
             utter.rate = rate
             utter.pitch = pitch
             utter.onend = () => resolve()
+
             synth.cancel()
             synth.speak(utter)
         }
@@ -71,7 +149,8 @@ function startCountdown(seconds: number) {
         countdown.value--
         if (countdown.value <= 0) {
             clearInterval(countdownTimer!)
-            goToNextQuestion()
+
+            // goToNextQuestion()
         }
     }, 1000)
 }
@@ -95,6 +174,10 @@ function typeLine(text: string) {
 // --- Play question ---
 async function playQuestion() {
     if (!currentQuestion.value) return
+
+    removedAnswers.value = []
+    audienceResult.value = []
+    phoneSuggestion.value = null
 
     selectedIndex.value = null
     visibleAnswers.value = [false, false, false, false]
@@ -167,17 +250,60 @@ onMounted(() => {
                 v-for="(answer, index) in currentQuestion?.answers"
                 v-show="visibleAnswers[index]"
                 :key="answer"
-                :disabled="selectedIndex !== null"
-                class="bg-[#1a103d] border-2 border-yellow-400 text-[#fff8e7] text-lg px-6 py-4 rounded-md transition-all duration-300
-          hover:bg-yellow-400 hover:text-[#120733] hover:shadow-[0_0_15px_#facc15]"
+                :disabled="selectedIndex !== null || removedAnswers.includes(index)"
+                class="answer-btn"
                 :class="{
-                    'bg-green-500 text-white': selectedIndex !== null && index === currentQuestion?.correctIndex,
-                    'bg-red-500 text-white': selectedIndex === index && index !== currentQuestion?.correctIndex,
+                    '!bg-green-500 !text-white': selectedIndex !== null && index === currentQuestion?.correctIndex,
+                    '!bg-red-500 !text-white': selectedIndex === index && index !== currentQuestion?.correctIndex,
+                    '!ring-4 !ring-blue-400': phoneSuggestion === index,
+                    'answer-crossed': removedAnswers.includes(index),
                 }"
                 @click="selectAnswer(index)"
             >
                 {{ answerLabels[index] }} {{ answer }}
+                <span v-if="audienceResult.length"> — {{ audienceResult[index] }}%</span>
             </button>
         </div>
     </div>
 </template>
+
+<style scoped>
+.answer-btn {
+    background: #1a103d;
+    border: 2px solid #facc15;
+    color: #fff8e7;
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.answer-btn:hover:not(:disabled) {
+    background: #facc15;
+    color: #120733;
+    box-shadow: 0 0 15px #facc15;
+}
+
+.answer-crossed {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.answer-crossed::before,
+.answer-crossed::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    transform: rotate(25deg);
+}
+
+.answer-crossed::after {
+    transform: rotate(-25deg);
+}
+</style>

@@ -1,8 +1,10 @@
 <script setup lang="ts">
 const ladderMode = ref<'none' | 'full' | 'milestones'>('none')
 const lifelineHighlight = ref<'fifty' | 'phone' | 'audience' | null>(null)
+
 const showMC = ref(true)
 const showQuestion = ref(false)
+const lifelines = ref<'fiftyFifty' | 'askAudience' | 'phoneFriend'>()
 
 function handleHighlightLifeline(type: 'fifty' | 'phone' | 'audience') {
     lifelineHighlight.value = type
@@ -12,12 +14,18 @@ function startGame() {
     showMC.value = false
     showQuestion.value = true
 }
+
+function handleUseLifeline(type: 'fiftyFifty' | 'askAudience' | 'phoneFriend') {
+    lifelines.value = type
+}
 </script>
 
 <template>
     <div>
         <MillionaireLifelines
+            :disabled="showMC"
             :highlight="lifelineHighlight"
+            @use-lifeline="handleUseLifeline"
             @lifeline-done="lifelineHighlight = null"
         />
         <MCIntro
@@ -36,6 +44,7 @@ function startGame() {
         <QuestionScreen
             v-if="showQuestion"
             class="fade-in"
+            :lifelines="lifelines"
         />
     </div>
 </template>

@@ -1,10 +1,14 @@
 <script setup lang="ts">
-const props = defineProps<{ highlight?: 'fifty' | 'phone' | 'audience' | null }>()
+const props = defineProps<{
+    disabled?: boolean
+    highlight?: 'fifty' | 'phone' | 'audience' | null
+}>()
 
 const activeHighlight = ref<'fifty' | 'phone' | 'audience' | null>(null)
 
 const emit = defineEmits<{
     (e: 'lifeline-done'): void
+    (e: 'use-lifeline', type: 'fiftyFifty' | 'askAudience' | 'phoneFriend'): void
 }>()
 
 watch(() => props.highlight, (val) => {
@@ -25,20 +29,23 @@ const usedLifelines = ref({
 })
 
 function useFiftyFifty() {
-    if (usedLifelines.value.fifty) return
+    if (props.disabled || usedLifelines.value.fifty) return
     usedLifelines.value.fifty = true
+    emit('use-lifeline', 'fiftyFifty')
     console.log('🔍 50:50 used!')
 }
 
 function usePhone() {
-    if (usedLifelines.value.phone) return
+    if (props.disabled || usedLifelines.value.phone) return
     usedLifelines.value.phone = true
+    emit('use-lifeline', 'phoneFriend')
     console.log('📞 Phone a Friend used!')
 }
 
 function useAudience() {
-    if (usedLifelines.value.audience) return
+    if (props.disabled || usedLifelines.value.audience) return
     usedLifelines.value.audience = true
+    emit('use-lifeline', 'askAudience')
     console.log('👥 Ask the Audience used!')
 }
 </script>
@@ -98,7 +105,6 @@ function useAudience() {
     opacity: 0.4;
     cursor: not-allowed;
 }
-
 .highlight {
     background: #facc15 !important;
     color: #120733 !important;
