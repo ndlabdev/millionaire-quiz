@@ -41,7 +41,7 @@ const answerLabels = ['A:', 'B:', 'C:', 'D:']
 const removedAnswers = ref<number[]>([])
 const audienceResult = ref<number[]>([])
 const phoneSuggestion = ref<number | null>(null)
-
+const isTimeUp = ref(false)
 const canUseLifelines = ref(true)
 
 const emit = defineEmits<{ (e: 'lifelines-ready', ready: boolean): void }>()
@@ -158,13 +158,14 @@ function stopCountdown() {
 
 function startCountdown(seconds: number) {
     stopCountdown()
+    isTimeUp.value = false
     countdown.value = seconds
     countdownTimer = window.setInterval(() => {
         countdown.value--
         if (countdown.value <= 0) {
             stopCountdown()
-
-            // goToNextQuestion()
+            isTimeUp.value = true
+            handleTimeUp()
         }
     }, 1000)
 }
@@ -183,6 +184,25 @@ function typeLine(text: string) {
             }
         }, 40)
     })
+}
+
+function handleTimeUp() {
+    console.log('⏰ Time\'s up!')
+
+    // 1. Highlight the correct answer
+    selectedIndex.value = null // reset if already chosen
+    const correctIndex = currentQuestion.value?.correctIndex
+    if (typeof correctIndex === 'number') {
+        selectedIndex.value = correctIndex
+    }
+
+    // 2. After 2 seconds, show Game Over message
+    setTimeout(() => {
+        alert('❌ Time\'s up!\nGame Over.')
+
+        // TODO: emit to parent to show the Game Over screen
+        // emit('game-over') or router.push('/game-over')
+    }, 2000)
 }
 
 // --- Play question ---
@@ -252,14 +272,18 @@ onMounted(() => {
         <!-- Countdown -->
         <div
             v-if="countdown > 0"
-            class="absolute top-4 right-6 text-yellow-400 text-3xl font-bold"
+            class="absolute top-4 right-6 text-3xl font-bold transition-all duration-300"
+            :class="{
+                'text-yellow-400': countdown > 10,
+                'text-red-500 animate-flash': countdown <= 10,
+            }"
         >
             {{ countdown }}
         </div>
 
         <!-- Question -->
         <div
-            class="bg-[#120733dd] backdrop-blur-md border border-yellow-400/50 rounded-lg px-8 py-4 text-white text-xl max-w-3xl text-center shadow-lg min-h-[80px]"
+            class="bg-[#120733dd] backdrop-blur-md border border-yellow-400/50 rounded-lg px-8 py-4 text-white text-xl max-w-3xl text-center shadow-lg"
         >
             {{ displayText }}
         </div>
@@ -270,10 +294,12 @@ onMounted(() => {
                 v-for="(answer, index) in currentQuestion?.answers"
                 v-show="visibleAnswers[index]"
                 :key="answer"
-                :disabled="selectedIndex !== null || removedAnswers.includes(index)"
+                :disabled="selectedIndex !== null || removedAnswers.includes(index) || countdown <= 0"
                 class="answer-btn"
                 :class="{
-                    '!bg-green-500 !text-white': selectedIndex !== null && index === currentQuestion?.correctIndex,
+                    '!bg-green-500 !text-white':
+                        (index === currentQuestion?.correctIndex && isTimeUp)
+                        || (selectedIndex !== null && index === currentQuestion?.correctIndex),
                     '!bg-red-500 !text-white': selectedIndex === index && index !== currentQuestion?.correctIndex,
                     '!ring-4 !ring-blue-400': phoneSuggestion === index,
                     'answer-crossed': removedAnswers.includes(index),
@@ -325,5 +351,14 @@ onMounted(() => {
 
 .answer-crossed::after {
     transform: rotate(-25deg);
+}
+
+@keyframes flash {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.6; }
+}
+
+.animate-flash {
+    animation: flash 0.5s infinite;
 }
 </style>
