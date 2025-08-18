@@ -46,9 +46,6 @@ const canUseLifelines = ref(true)
 const showGameOver = ref(false)
 const gameOverMessage = ref('')
 const isWaiting = ref(false)
-const waitingSound = new Audio('/waitingSound.m4a')
-const correctSound = new Audio('/correctSound.m4a')
-const wrongSound = new Audio('/wrongSound.m4a')
 
 const emit = defineEmits<{
     (e: 'lifelines-ready', ready: boolean): void
@@ -229,12 +226,12 @@ function handleGameOver(reason: string) {
 
 // --- Play question ---
 async function playQuestion() {
-    if (!currentQuestion.value) return
+    stopAllSounds()
 
+    if (!currentQuestion.value) return
     stopCountdown()
 
     canUseLifelines.value = false
-
     removedAnswers.value = []
     audienceResult.value = []
     phoneSuggestion.value = null
@@ -253,7 +250,6 @@ async function playQuestion() {
     }
 
     canUseLifelines.value = true
-
     startCountdown(30)
 }
 
@@ -291,9 +287,9 @@ function selectAnswer(index: number) {
                 emit('correct-answer', currentIndex.value + 1)
                 goToNextQuestion()
             } else {
-                handleGameOver('Wrong answer!')
+                handleGameOver('❌ Wrong answer!')
             }
-        }, 2000)
+        }, 4000)
     }, 4000)
 }
 

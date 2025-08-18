@@ -7,12 +7,22 @@ correctSound.volume = 1
 wrongSound.volume = 1
 
 export function stopAllSounds() {
+    console.log('⏹️ Stopping all sounds...')
+
     waitingSound.pause()
     waitingSound.currentTime = 0
+
     correctSound.pause()
     correctSound.currentTime = 0
+
     wrongSound.pause()
     wrongSound.currentTime = 0
+
+    console.log('🎵 Status:', {
+        waiting: { paused: waitingSound.paused, current: waitingSound.currentTime },
+        correct: { paused: correctSound.paused, current: correctSound.currentTime },
+        wrong: { paused: wrongSound.paused, current: wrongSound.currentTime }
+    })
 }
 
 export function playSound(audio: HTMLAudioElement) {
