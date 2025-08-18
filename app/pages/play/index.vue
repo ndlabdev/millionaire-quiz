@@ -25,18 +25,18 @@ function handleUseLifeline(type: 'fiftyFifty' | 'askAudience' | 'phoneFriend') {
     lifelines.value = type
 }
 
-function handleCorrectAnswer(nextLevel: number) {
+function handleCorrectAnswer(nextLevel: number, nextFn: () => void) {
     ladderMode.value = 'none'
     nextTick(() => {
         ladderMode.value = 'highlight'
     })
-
     highlightLevel.value = nextLevel
 
     setTimeout(() => {
         highlightLevel.value = null
         ladderMode.value = 'none'
-    }, 1500)
+        nextFn()
+    }, 5000)
 }
 </script>
 

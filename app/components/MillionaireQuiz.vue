@@ -51,6 +51,9 @@ watch(() => props.mode, (mode) => {
         indices = Array.from({ length: levels.length }, (_, i) => levels.length - 1 - i)
     } else if (mode === 'milestones') {
         indices = levels.map((l, idx) => l.milestone ? idx : -1).filter(i => i !== -1)
+    } else if (mode === 'highlight' && props.highlightLevel) {
+        const idx = levels.findIndex(l => l.number === props.highlightLevel)
+        if (idx !== -1) indices = [idx]
     }
 
     let step = 0
@@ -60,10 +63,7 @@ watch(() => props.mode, (mode) => {
         if (step >= indices.length) {
             clearInterval(timer)
 
-            const holdTime
-                = props.mode === 'highlight' || props.highlightLevel
-                    ? 3500
-                    : 500
+            const holdTime = mode === 'highlight' ? 6000 : 800
 
             setTimeout(() => {
                 emit('done')

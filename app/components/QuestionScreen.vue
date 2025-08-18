@@ -49,7 +49,7 @@ const isWaiting = ref(false)
 
 const emit = defineEmits<{
     (e: 'lifelines-ready', ready: boolean): void
-    (e: 'correct-answer', nextQuestion: number): void
+    (e: 'correct-answer', nextQuestion: number, nextFn: () => void): void
 }>()
 
 const props = defineProps<Props>()
@@ -227,9 +227,11 @@ function handleGameOver(reason: string) {
 // --- Play question ---
 async function playQuestion() {
     stopAllSounds()
+    stopCountdown()
+
+    countdown.value = 0
 
     if (!currentQuestion.value) return
-    stopCountdown()
 
     canUseLifelines.value = false
     removedAnswers.value = []
@@ -261,7 +263,6 @@ function selectAnswer(index: number) {
 
     canUseLifelines.value = false
     isWaiting.value = true
-
     playSound(waitingSound)
 
     setTimeout(() => {
@@ -273,23 +274,18 @@ function selectAnswer(index: number) {
 
         if (isCorrect) {
             playSound(correctSound)
+            emit('correct-answer', currentIndex.value + 1, goToNextQuestion)
         } else {
             playSound(wrongSound)
 
             setTimeout(() => {
                 selectedIndex.value = correctIndex ?? null
             }, 500)
-        }
 
-        setTimeout(() => {
-            stopAllSounds()
-            if (isCorrect) {
-                emit('correct-answer', currentIndex.value + 1)
-                goToNextQuestion()
-            } else {
+            setTimeout(() => {
                 handleGameOver('❌ Wrong answer!')
-            }
-        }, 4000)
+            }, 4000)
+        }
     }, 4000)
 }
 
