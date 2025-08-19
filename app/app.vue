@@ -1,26 +1,61 @@
 <script setup lang="ts">
 
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl as string
+
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    'name': 'Millionaire Quiz',
+    'url': siteUrl,
+    'potentialAction': {
+        '@type': 'SearchAction',
+        'target': `${siteUrl}/search?q={query}`,
+        'query-input': 'required name=query'
+    }
+}
+
 useHead({
     title: 'Millionaire Quiz - Become a Millionaire',
+    titleTemplate: t => t ? `${t} | Millionaire Quiz` : 'Millionaire Quiz',
+    link: [
+        { rel: 'canonical', href: siteUrl },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' }
+    ],
     meta: [
         { name: 'description', content: 'Play Millionaire Quiz and answer 15 questions to become a millionaire. Enjoy lifelines, prize ladder, and hundreds of fun questions.' },
         { name: 'keywords', content: 'Millionaire Quiz, Who Wants to Be a Millionaire, trivia, quiz game, knowledge challenge' },
+
+        // Open Graph
+        { property: 'og:site_name', content: 'Millionaire Quiz' },
         { property: 'og:title', content: 'Millionaire Quiz - Become a Millionaire' },
         { property: 'og:description', content: 'Challenge your knowledge with 15 questions and climb the prize ladder to win big.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://yourdomain.com' },
-        { property: 'og:image', content: 'https://yourdomain.com/og-image.jpg' },
+        { property: 'og:url', content: siteUrl },
+        { property: 'og:image', content: `${siteUrl}/og-image.jpg` },
+
+        // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Millionaire Quiz - Become a Millionaire' },
         { name: 'twitter:description', content: 'Play Millionaire Quiz, answer 15 questions, and win the grand prize.' },
-        { name: 'twitter:image', content: 'https://yourdomain.com/twitter-image.jpg' }
+        { name: 'twitter:image', content: `${siteUrl}/og-image.jpg` },
+
+        // PWA / UI
+        { name: 'theme-color', content: '#0b032d' }
     ],
-    htmlAttrs: {
-        lang: 'en'
-    },
-    bodyAttrs: {
-        class: 'text-white font-sans antialiased overflow-hidden'
-    }
+    htmlAttrs: { lang: 'en' },
+    bodyAttrs: { class: 'text-white font-sans antialiased overflow-hidden' },
+    script: [
+        {
+            key: 'ld-website',
+            type: 'application/ld+json',
+            innerHTML: JSON.stringify(jsonLd)
+        }
+    ]
 })
 </script>
 
