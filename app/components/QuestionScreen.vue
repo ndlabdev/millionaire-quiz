@@ -131,10 +131,8 @@ async function playQuestion() {
     selectedIndex.value = null
     visibleAnswers.value = [false, false, false, false]
 
-    await Promise.all([
-        speakText(currentQuestion.value.question),
-        typewriterRef.value?.typeLine(currentQuestion.value.question)
-    ])
+    typewriterRef.value?.typeLine(currentQuestion.value.question)
+    await speakText(currentQuestion.value.question)
 
     for (let i = 0; i < currentQuestion.value.answers.length; i++) {
         visibleAnswers.value[i] = true
@@ -232,27 +230,23 @@ onMounted(() => {
 
         <!-- Answers -->
         <div class="grid grid-cols-2 gap-4 max-w-3xl w-full">
-            <button
+            <AnswerButton
                 v-for="(answer, index) in currentQuestion?.answers"
                 v-show="visibleAnswers[index]"
                 :key="answer"
-                :disabled="selectedIndex !== null || removedAnswers.includes(index) || (countdownRef?.timeLeft ?? 0) <= 0"
-                class="answer-btn"
-                :class="{
-                    '!bg-green-500 !text-white':
-                        !isWaiting && ((index === currentQuestion?.correctIndex && isTimeUp)
-                            || (selectedIndex !== null && index === currentQuestion?.correctIndex)),
-                    '!bg-red-500 !text-white animate-shake':
-                        !isWaiting && selectedIndex === index && index !== currentQuestion?.correctIndex,
-                    'waiting-pulse': isWaiting && selectedIndex === index,
-                    '!ring-4 !ring-blue-400': phoneSuggestion === index,
-                    'answer-crossed': removedAnswers.includes(index),
-                }"
-                @click="selectAnswer(index)"
-            >
-                {{ answerLabels[index] }} {{ answer }}
-                <span v-if="audienceResult.length"> — {{ audienceResult[index] }}%</span>
-            </button>
+                :label="answerLabels[index]"
+                :answer="answer"
+                :index="index"
+                :correct-index="currentQuestion?.correctIndex ?? null"
+                :selected-index="selectedIndex"
+                :removed-answers="removedAnswers"
+                :audience-result="audienceResult"
+                :phone-suggestion="phoneSuggestion"
+                :is-waiting="isWaiting"
+                :is-time-up="isTimeUp"
+                :time-left="(countdownRef?.timeLeft ?? 0)"
+                @select="selectAnswer"
+            />
         </div>
 
         <GameOverModal
@@ -262,71 +256,3 @@ onMounted(() => {
         />
     </div>
 </template>
-
-<style scoped>
-.answer-btn {
-    background: #1a103d;
-    border: 2px solid #facc15;
-    color: #fff8e7;
-    font-size: 1rem;
-    padding: 0.5rem 1.2rem;
-    border-radius: 0.5rem;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.answer-btn:hover:not(:disabled) {
-    background: #facc15;
-    color: #120733;
-    box-shadow: 0 0 15px #facc15;
-}
-
-.answer-crossed {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.answer-crossed::before,
-.answer-crossed::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: red;
-    transform: rotate(25deg);
-}
-
-.answer-crossed::after {
-    transform: rotate(-25deg);
-}
-
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    20% { transform: translateX(-6px); }
-    40% { transform: translateX(6px); }
-    60% { transform: translateX(-4px); }
-    80% { transform: translateX(4px); }
-}
-
-.animate-shake {
-    animation: shake 0.5s ease-in-out;
-}
-@keyframes pulse-glow {
-    0%, 100% {
-        box-shadow: 0 0 10px #facc15, 0 0 20px #facc15, 0 0 30px #facc15;
-        transform: scale(1);
-    }
-    50% {
-        box-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700, 0 0 60px #ffd700;
-        transform: scale(1.05);
-    }
-}
-
-.waiting-pulse {
-    animation: pulse-glow 1s infinite;
-    border-color: #facc15 !important;
-}
-</style>
