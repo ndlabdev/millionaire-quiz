@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type MusicToggle from './MusicToggle.vue'
-import Countdown from './Countdown.vue'
 import type CountdownType from './Countdown.vue'
+import type TypewriterType from './Typewriter.vue'
+import type MusicToggleType from './MusicToggle.vue'
 
 interface Props {
     lifelines?: 'fiftyFifty' | 'askAudience' | 'phoneFriend'
@@ -34,7 +34,6 @@ const gameQuestions = computed(() => {
 const currentIndex = ref(0)
 const currentQuestion = computed(() => gameQuestions.value[currentIndex.value])
 
-const displayText = ref('')
 const visibleAnswers = ref([false, false, false, false])
 const selectedIndex = ref<number | null>(null)
 const answerLabels = ['A:', 'B:', 'C:', 'D:']
@@ -48,8 +47,9 @@ const showGameOver = ref(false)
 const gameOverMessage = ref('')
 const isWaiting = ref(false)
 
-const musicRef = ref<InstanceType<typeof MusicToggle> | null>(null)
+const musicRef = ref<InstanceType<typeof MusicToggleType> | null>(null)
 const countdownRef = ref<InstanceType<typeof CountdownType> | null>(null)
+const typewriterRef = ref<InstanceType<typeof TypewriterType> | null>(null)
 
 const emit = defineEmits<{
     (e: 'lifelines-ready', ready: boolean): void
@@ -101,22 +101,6 @@ watch(lifelines, (val) => {
     }
 })
 
-// --- Typewriter effect ---
-function typeLine(text: string) {
-    return new Promise<void>((resolve) => {
-        displayText.value = ''
-        let i = 0
-        const timer = setInterval(() => {
-            displayText.value += text[i]
-            i++
-            if (i >= text.length) {
-                clearInterval(timer)
-                resolve()
-            }
-        }, 40)
-    })
-}
-
 function handleTimeUp() {
     console.log('⏰ Time\'s up!')
     selectedIndex.value = currentQuestion.value?.correctIndex ?? null
@@ -137,7 +121,6 @@ function handleGameOver(reason: string) {
 async function playQuestion() {
     stopAllSounds()
     countdownRef.value?.stop()
-
     if (!currentQuestion.value) return
 
     canUseLifelines.value = false
@@ -150,7 +133,7 @@ async function playQuestion() {
 
     await Promise.all([
         speakText(currentQuestion.value.question),
-        typeLine(currentQuestion.value.question)
+        typewriterRef.value?.typeLine(currentQuestion.value.question)
     ])
 
     for (let i = 0; i < currentQuestion.value.answers.length; i++) {
@@ -241,11 +224,11 @@ onMounted(() => {
         </div>
 
         <!-- Question -->
-        <div
-            class="bg-[#120733dd] backdrop-blur-md border border-yellow-400/50 rounded-lg px-8 py-4 text-white text-xl max-w-3xl text-center shadow-lg"
-        >
-            {{ displayText }}
-        </div>
+        <Typewriter
+            ref="typewriterRef"
+            :text="currentQuestion?.question ?? ''"
+            :speed="40"
+        />
 
         <!-- Answers -->
         <div class="grid grid-cols-2 gap-4 max-w-3xl w-full">
