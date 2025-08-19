@@ -1,75 +1,158 @@
-# Nuxt Minimal Starter
+# 🎯 Millionaire Quiz (Nuxt 4)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A **Who Wants to Be a Millionaire?**-style quiz game built with **Nuxt 4**, **TypeScript**, and **TailwindCSS**. 
+Answer questions, use lifelines, and climb your way to the million with smooth, game-like UI and responsive performance.
 
-## Setup
+[![Nuxt](https://img.shields.io/badge/Nuxt-4-00DC82?logo=nuxt.js&logoColor=white)](https://nuxt.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38B2AC?logo=tailwindcss)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Make sure to install dependencies:
+---
+
+## ✨ Features
+
+- 🎮 **15-question** ladder with increasing difficulty
+- ⏱️ Per-question **countdown timer** with visual feedback
+- 🛟 Lifelines: **50/50**, **Ask the Audience**, **Phone a Friend**
+- 🧠 Clear state transitions (waiting → locking → reveal → next)
+- 🌓 **Dark-mode** friendly UI (Tailwind utility tokens)
+- 📱 Fully **responsive** and accessible
+
+---
+
+## 🧱 Tech Stack
+
+- **Framework:** Nuxt 4 (Vue 3, Nitro)
+- **Language:** TypeScript (strict)
+- **UI:** TailwindCSS 4 (utility-first + CSS variables)
+- **State:** Composables & reactive stores (no external state libs)
+
+---
+
+## 🚀 Getting Started
+
+### 1) Clone
 
 ```bash
-# npm
-npm install
+git clone https://github.com/ndlabdev/millionaire-quiz.git
+cd millionaire-quiz
+```
 
-# pnpm
+### 2) Install
+
+```bash
+# pick one
 pnpm install
-
-# yarn
+# or
 yarn install
-
-# bun
-bun install
+# or
+npm install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### 3) Dev
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+# or yarn dev / npm run dev
 ```
 
-## Production
+App runs at **http://localhost:3000** by default.
 
-Build the application for production:
+### 4) Build & Preview
 
 ```bash
-# npm
-npm run build
-
-# pnpm
 pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
 pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+
+## ⚙️ Configuration
+
+- **TypeScript:** Strict mode enabled, no `any` usage.
+- **Tailwind:** Preconfigured with tokens for brand colors and dark mode. Adjust in `tailwind.config.ts` if needed.
+- **Runtime:** Pure client-side game logic; no external API required.
+
+---
+
+## 📂 Project Structure
+
+```
+millionaire-quiz/
+├─ app.vue                # Root shell (layout wrappers, theme classes)
+├─ pages/
+│  ├─ index.vue           # Start screen (Play, rules, banner)
+│  └─ play.vue            # Main game screen
+├─ components/
+│  ├─ game/
+│  │  ├─ QuestionCard.vue
+│  │  ├─ AnswerButton.vue
+│  │  ├─ LifelinesBar.vue
+│  │  └─ LadderList.vue
+│  └─ ui/                 # Buttons, modals, progress ring, toasts
+├─ composables/
+│  ├─ useGame.ts          # Core game state & transitions
+│  ├─ useLifelines.ts     # 50/50, audience, phone logic
+│  └─ useTimer.ts         # Countdown with pause/resume
+├─ assets/
+│  ├─ styles/             # Tailwind layers, tokens
+│  └─ audio/              # Sounds (lock-in, correct, wrong)
+├─ public/                # Static images (logo, banner)
+└─ ...
+```
+
+---
+
+## 🧪 Scripts
+
+```json
+{
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "lint": "eslint ."
+  }
+}
+```
+
+---
+
+## 🖼️ Screenshots
+
+> Add your screenshots in `public/screens` and reference them here.
+
+```md
+![Start](./public/screens/start.png)
+![Gameplay](./public/screens/gameplay.png)
+```
+
+---
+
+## ☁️ Deployment
+
+- **Vercel** recommended (first-class Nuxt support). 
+- Import repo → set build command automatically → deploy.  
+- Static assets served from `public/`; Nitro handles routing.
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Localized question sets (EN/VI)
+- [ ] Persistent high scores (localStorage → server)
+- [ ] Sound & music toggles + volume control
+
+---
+
+## 🙏 Acknowledgements
+
+Inspired by the classic TV show *Who Wants to Be a Millionaire?*. 
+This project is for learning and demonstration purposes.
+
+---
+
+## 📜 License
+
+**MIT** – see `LICENSE` for details.
