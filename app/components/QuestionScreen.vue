@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type MusicToggle from './MusicToggle.vue'
 
 interface Props {
     lifelines?: 'fiftyFifty' | 'askAudience' | 'phoneFriend'
@@ -46,6 +47,7 @@ const canUseLifelines = ref(true)
 const showGameOver = ref(false)
 const gameOverMessage = ref('')
 const isWaiting = ref(false)
+const musicRef = ref<InstanceType<typeof MusicToggle> | null>(null)
 
 const emit = defineEmits<{
     (e: 'lifelines-ready', ready: boolean): void
@@ -251,6 +253,7 @@ async function playQuestion() {
         await speakText(`${answerLabels[i]} ${currentQuestion.value.answers[i]}`)
     }
 
+    musicRef.value?.resume()
     canUseLifelines.value = true
     startCountdown(30)
 }
@@ -263,6 +266,8 @@ function selectAnswer(index: number) {
 
     canUseLifelines.value = false
     isWaiting.value = true
+
+    musicRef.value?.pause()
     playSound(waitingSound)
 
     setTimeout(() => {
@@ -284,6 +289,7 @@ function selectAnswer(index: number) {
 
             setTimeout(() => {
                 handleGameOver('❌ Wrong answer!')
+                musicRef.value?.resume()
             }, 4000)
         }
     }, 4000)
@@ -333,6 +339,8 @@ onMounted(() => {
         >
             {{ countdown }}
         </div>
+
+        <MusicToggle ref="musicRef" />
 
         <!-- Question counter -->
         <div class="text-lg font-semibold text-yellow-300">
