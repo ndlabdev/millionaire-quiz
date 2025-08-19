@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import type MusicToggle from './MusicToggle.vue'
+import Countdown from './Countdown.vue'
+import type CountdownType from './Countdown.vue'
 
 interface Props {
     lifelines?: 'fiftyFifty' | 'askAudience' | 'phoneFriend'
@@ -35,8 +37,6 @@ const currentQuestion = computed(() => gameQuestions.value[currentIndex.value])
 const displayText = ref('')
 const visibleAnswers = ref([false, false, false, false])
 const selectedIndex = ref<number | null>(null)
-const countdown = ref(0)
-let countdownTimer: number | null = null
 const answerLabels = ['A:', 'B:', 'C:', 'D:']
 
 const removedAnswers = ref<number[]>([])
@@ -47,7 +47,9 @@ const canUseLifelines = ref(true)
 const showGameOver = ref(false)
 const gameOverMessage = ref('')
 const isWaiting = ref(false)
+
 const musicRef = ref<InstanceType<typeof MusicToggle> | null>(null)
+const countdownRef = ref<InstanceType<typeof CountdownType> | null>(null)
 
 const emit = defineEmits<{
     (e: 'lifelines-ready', ready: boolean): void
@@ -99,85 +101,6 @@ watch(lifelines, (val) => {
     }
 })
 
-// --- Voice ---
-function speakText(text: string, lang = 'en-US', rate = 1, pitch = 1.2) {
-    return new Promise<void>((resolve) => {
-        if (!('speechSynthesis' in window)) {
-            console.warn('SpeechSynthesis API is not supported in this browser.')
-            resolve()
-            return
-        }
-
-        const synth = window.speechSynthesis
-        let voices: SpeechSynthesisVoice[] = []
-
-        const loadVoices = () => {
-            voices = synth.getVoices()
-
-            const femaleKeywords = [
-                'female', 'nữ', 'woman',
-                'Zira', 'Samantha', 'Eva', 'Joanna',
-                'Google US English Female', 'Google UK English Female'
-            ]
-
-            let voice = voices.find(v =>
-                v.lang === lang
-                && femaleKeywords.some(keyword =>
-                    v.name.toLowerCase().includes(keyword.toLowerCase())
-                )
-            )
-
-            if (!voice) {
-                voice = voices.find(v => v.lang === lang)
-            }
-
-            if (!voice) {
-                voice = voices[0]
-            }
-
-            console.log('🎤 Voice selected:', voice?.name)
-
-            const utter = new SpeechSynthesisUtterance(text)
-            utter.voice = voice || null
-            utter.lang = lang
-            utter.rate = rate
-            utter.pitch = pitch
-            utter.onend = () => resolve()
-
-            synth.cancel()
-            synth.speak(utter)
-        }
-
-        if (synth.getVoices().length === 0) {
-            synth.onvoiceschanged = loadVoices
-        } else {
-            loadVoices()
-        }
-    })
-}
-
-// --- Countdown ---
-function stopCountdown() {
-    if (countdownTimer) {
-        clearInterval(countdownTimer)
-        countdownTimer = null
-    }
-}
-
-function startCountdown(seconds: number) {
-    stopCountdown()
-    isTimeUp.value = false
-    countdown.value = seconds
-    countdownTimer = window.setInterval(() => {
-        countdown.value--
-        if (countdown.value <= 0) {
-            stopCountdown()
-            isTimeUp.value = true
-            handleTimeUp()
-        }
-    }, 1000)
-}
-
 // --- Typewriter effect ---
 function typeLine(text: string) {
     return new Promise<void>((resolve) => {
@@ -202,22 +125,6 @@ function handleTimeUp() {
     }, 2000)
 }
 
-function getPrizeAmount(level: number) {
-    const milestones = [
-        { level: 5, amount: 1000 },
-        { level: 10, amount: 32000 },
-        { level: 15, amount: 1000000 }
-    ]
-
-    let prize = 0
-    for (const m of milestones) {
-        if (level >= m.level) {
-            prize = m.amount
-        }
-    }
-    return prize
-}
-
 function handleGameOver(reason: string) {
     const lastCorrect = currentIndex.value
     const prize = getPrizeAmount(lastCorrect)
@@ -229,9 +136,7 @@ function handleGameOver(reason: string) {
 // --- Play question ---
 async function playQuestion() {
     stopAllSounds()
-    stopCountdown()
-
-    countdown.value = 0
+    countdownRef.value?.stop()
 
     if (!currentQuestion.value) return
 
@@ -255,14 +160,14 @@ async function playQuestion() {
 
     musicRef.value?.resume()
     canUseLifelines.value = true
-    startCountdown(30)
+    countdownRef.value?.start(30)
 }
 
 // --- Answer select ---
 function selectAnswer(index: number) {
     if (selectedIndex.value !== null) return
     selectedIndex.value = index
-    stopCountdown()
+    countdownRef.value?.stop()
 
     canUseLifelines.value = false
     isWaiting.value = true
@@ -314,13 +219,6 @@ function goToNextQuestion() {
     playQuestion()
 }
 
-function shuffleArray<T>(array: T[]): T[] {
-    return array
-        .map(item => ({ item, sort: Math.random() }))
-        .sort((a, b) => a.sort - b.sort)
-        .map(({ item }) => item)
-}
-
 onMounted(() => {
     playQuestion()
 })
@@ -329,16 +227,11 @@ onMounted(() => {
 <template>
     <div class="absolute inset-0 flex flex-col items-center justify-center gap-6 z-20">
         <!-- Countdown -->
-        <div
-            v-if="countdown > 0"
-            class="absolute top-4 right-6 text-3xl font-bold transition-all duration-300"
-            :class="{
-                'text-yellow-400': countdown > 10,
-                'text-red-500 animate-flash': countdown <= 10,
-            }"
-        >
-            {{ countdown }}
-        </div>
+        <Countdown
+            ref="countdownRef"
+            :seconds="30"
+            @timeup="handleTimeUp"
+        />
 
         <MusicToggle ref="musicRef" />
 
@@ -360,7 +253,7 @@ onMounted(() => {
                 v-for="(answer, index) in currentQuestion?.answers"
                 v-show="visibleAnswers[index]"
                 :key="answer"
-                :disabled="selectedIndex !== null || removedAnswers.includes(index) || countdown <= 0"
+                :disabled="selectedIndex !== null || removedAnswers.includes(index) || (countdownRef?.timeLeft ?? 0) <= 0"
                 class="answer-btn"
                 :class="{
                     '!bg-green-500 !text-white':
@@ -425,15 +318,6 @@ onMounted(() => {
 
 .answer-crossed::after {
     transform: rotate(-25deg);
-}
-
-@keyframes flash {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.2); opacity: 0.6; }
-}
-
-.animate-flash {
-    animation: flash 0.5s infinite;
 }
 
 @keyframes shake {
